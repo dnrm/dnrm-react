@@ -1,5 +1,7 @@
 import './App.css';
 import Dnrm from './Dnrm';
+import StateTest from './StateTest';
+
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,6 +17,7 @@ function App() {
   return (
     <Container className="App">
       <Dnrm />
+      <StateTest />
     </Container>
   );
 }

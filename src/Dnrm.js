@@ -30,7 +30,7 @@ function Dnrm() {
 
     const [count, setCount] = useState(0);
 
-    const plusOne = (event) => {
+    const plusOne = () => {
         setCount(count + 1);
     }
 
