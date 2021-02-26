@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from './components/Button';
 import Input from './components/Input';
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,15 +18,15 @@ export default function StateTest() {
     }
 
     const submit = (event) => {
-        window.location = `/?message=${message}`;
+        window.location = `/state-test?message=${message}`;
     }
 
     return (
         <div>
             <p>Your mesage: {message ? message : 'Nothing'}</p>
-            <StyledDiv>
+            <StyledDiv onSubmit={e => {e.preventDefault(); submit(e);}}>
                 <Input type="text" onChange={handleChange} />
-                <Button type="submit" onClick={submit}>Submit</Button>
+                <Button type="submit">Submit</Button>
             </StyledDiv>
         </div>
     )

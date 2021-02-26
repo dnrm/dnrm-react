@@ -10,6 +10,16 @@ const Button = styled.button`
     margin: 5px;
 `;
 
+const Item = styled.li`
+    padding: 10px;
+    background-color: gray;
+    margin: 5px;
+    list-style: none;
+    border-radius: 15px;
+    color: white;
+    display: inline-block;
+`;
+
 export default function AddToArray() {
 
     const [text, setText] = useState('');
@@ -20,17 +30,20 @@ export default function AddToArray() {
     }
 
     const handleClick = (e) => {
-        setMessage([text, ...messages], console.log(messages));
+        
+        setMessage([...messages, text], console.log(messages));
         setText('');
     }
 
     return (
         <>
             <h1>Add element to array</h1>
-            <input type="text" onChange={handleChange} value={text} />
-            <Button onClick={handleClick}>Add</Button>
+            <form onSubmit={e => { e.preventDefault(); handleClick(e);}}>
+                <input name="text" type="text" onChange={handleChange} value={text} />
+                <Button type="submit">Add</Button>
+            </form>
             <ul>
-                {messages.map(i => <li>{i}</li>)}
+                {messages.map((i, index) => <Item>{i}</Item>)}
             </ul>
         </>
     )
