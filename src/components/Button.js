@@ -16,6 +16,6 @@ const StyledButton = styled.button`
 
 export default function Button(props) {
     return (
-        <StyledButton danger onClick={props.onClick}>{props.children}</StyledButton>
+        <StyledButton onClick={props.onClick}>{props.children}</StyledButton>
     )
 }
