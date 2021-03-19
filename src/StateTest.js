@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 import Button from './components/Button';
 import Input from './components/Input';
@@ -23,6 +24,9 @@ export default function StateTest() {
 
     return (
         <div>
+            <Helmet>
+                <title>State Test | Daniel Medina</title>
+            </Helmet>
             <p>Your mesage: {message ? message : 'Nothing'}</p>
             <StyledDiv onSubmit={e => {e.preventDefault(); submit(e);}}>
                 <Input type="text" onChange={handleChange} />

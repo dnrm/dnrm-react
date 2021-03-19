@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet';
 
 const Title = styled.h1`
     font-size: 8em;
@@ -38,6 +39,9 @@ function Dnrm() {
 
     return (
         <>
+            <Helmet>
+                <title>Dnrm | Daniel Medina</title>
+            </Helmet>
             <Title className="gradient-text">ReactJS</Title>
             <Paragraph>{count} {count === 69 ? 'nice' : ''}</Paragraph>
             <ButtonContainer>

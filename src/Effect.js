@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from 'react-helmet';
 
 export default function Effect() {
   const [data, setData] = useState();
@@ -11,6 +12,9 @@ export default function Effect() {
 
   return (
     <div>
+      <Helmet>
+        <title>useEffect | Daniel Medina</title>
+      </Helmet>
       {data ? (
         <>
           <h1>Users</h1>

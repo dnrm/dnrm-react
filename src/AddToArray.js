@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 
 const Button = styled.button`
     border: none;
@@ -37,6 +38,9 @@ export default function AddToArray() {
 
     return (
         <>
+            <Helmet>
+                <title>Add To Array | Daniel Medina</title>
+            </Helmet>
             <h1>Add element to array</h1>
             <form onSubmit={e => { e.preventDefault(); handleClick(e);}}>
                 <input name="text" type="text" onChange={handleChange} value={text} />
