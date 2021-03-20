@@ -31,7 +31,7 @@ export default function Coldplay() {
             <ul id="albums-list">
                 <Album>Parachutes</Album>
                 <Album>A Rush of Blood to the Head</Album>
-                <Album>X & Y</Album>
+                <Album>X&Y</Album>
                 <Album>Viva La Vida or Death and All his Friends</Album>
                 <Album>Mylo Xyloto</Album>
                 <Album>Ghost Stories</Album>
