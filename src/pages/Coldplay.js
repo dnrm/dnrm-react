@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-import './styles/hr.css';
+import '../styles/hr.css';
 
 const Title = styled.h1`
     font-size: 3em;

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
 
+import '../styles/users.css';
+
 export default function Effect() {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch("https://reqres.in/api/users")
+    fetch("https://faunadb.herokuapp.com/get-users")
       .then((data) => data.json())
       .then((items) => setData(items["data"]));
   }, []);
@@ -17,17 +19,22 @@ export default function Effect() {
       </Helmet>
       {data ? (
         <>
-          <h1>Users</h1>
+          <h1 style={{ fontSize: '3em' }}>Users</h1>
           <br />
           <hr />
           <br />
           {data.map((i) => (
             <>
-              <div>
-                <h1>
-                  {i.first_name} {i.last_name}
-                </h1>
-                <h3>{i.email}</h3>
+              <div className="user">
+                <div className="image">
+                  <img src={i["data"]["img"]} alt={`${i["data"]["name"]}'s profile picture.`} className="profile-pic"/>
+                </div>
+                <div className="text">
+                  <h1>
+                    {i["data"]["name"]} {i["data"]["lastname"]}
+                  </h1>
+                  <h3>{i["data"]["birthDate"]}</h3>
+                </div>
               </div>
               <br />
             </>

@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Home from './Home';
-import Dnrm from "./Dnrm";
-import AddToArray from "./AddToArray";
-import StateTest from "./StateTest";
-import Effect from "./Effect";
-import Coldplay from './Coldplay';
+import Home from './pages/Home';
+import Dnrm from "./pages/Dnrm";
+import AddToArray from "./pages/AddToArray";
+import StateTest from "./pages/StateTest";
+import Effect from "./pages/Effect";
+import Coldplay from './pages/Coldplay';
 
 import styled from "styled-components";
 
@@ -67,7 +67,7 @@ export default function Navbar() {
         </Styled>
         {/* A <Switch> looks through its children <Route>s and
                     renders the first one that matches the current URL. */}
-        <Container>
+        <Container className="main-content">
           <Switch>
             <Route path="/dnrm">
               <Dnrm />

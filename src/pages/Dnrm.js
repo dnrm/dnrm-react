@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet';
 
+import '../styles/rainbow.css';
+
 const Title = styled.h1`
     font-size: 8em;
     font-weight: 900;
@@ -11,6 +13,7 @@ const Title = styled.h1`
 
 const Paragraph = styled.p`
     font-size: 1.2em;
+    text-align: center;
 `;
 
 const Button = styled.button`
@@ -25,6 +28,8 @@ const Button = styled.button`
 const ButtonContainer = styled.div`
     display: flex;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
 `;
 
 function Dnrm() {

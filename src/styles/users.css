@@ -1,0 +1,13 @@
+.user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+    border-radius: 50%;
+    border: 5px solid #92593A;
+}

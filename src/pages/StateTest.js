@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
-import Button from './components/Button';
-import Input from './components/Input';
+import Button from '../components/Button';
+import Input from '../components/Input';
 
 const StyledDiv = styled.form`
     display: flex;

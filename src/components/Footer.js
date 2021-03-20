@@ -2,13 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 100%;
-    padding: 25px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     color: white;
     background-color: #cb997e;
+    padding: 25px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
 `;
 
 export default function Footer() {
