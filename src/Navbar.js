@@ -6,6 +6,7 @@ import Dnrm from "./Dnrm";
 import AddToArray from "./AddToArray";
 import StateTest from "./StateTest";
 import Effect from "./Effect";
+import Coldplay from './Coldplay';
 
 import styled from "styled-components";
 
@@ -59,6 +60,9 @@ export default function Navbar() {
                 <Item>
                 <Link to="/effect" style={linkStyles}>useEffect Test</Link>
                 </Item>
+                <Item>
+                  <Link to="/coldplay" style={linkStyles}>Coldplay</Link>
+                </Item>
             </List>
         </Styled>
         {/* A <Switch> looks through its children <Route>s and
@@ -76,6 +80,9 @@ export default function Navbar() {
             </Route>
             <Route path="/effect">
                 <Effect />
+            </Route>
+            <Route path="/coldplay">
+              <Coldplay />
             </Route>
             <Route path="/">
               <Home />
