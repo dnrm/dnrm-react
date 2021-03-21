@@ -7,6 +7,7 @@ import AddToArray from "./pages/AddToArray";
 import StateTest from "./pages/StateTest";
 import Effect from "./pages/Effect";
 import Coldplay from './pages/Coldplay';
+import Hidden from './pages/Hidden';
 
 import styled from "styled-components";
 
@@ -83,6 +84,9 @@ export default function Navbar() {
             </Route>
             <Route path="/coldplay">
               <Coldplay />
+            </Route>
+            <Route path="/hidden">
+              <Hidden />
             </Route>
             <Route path="/">
               <Home />
