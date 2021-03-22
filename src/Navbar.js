@@ -1,98 +1,100 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Home from './pages/Home';
+import Home from "./pages/Home";
 import Dnrm from "./pages/Dnrm";
 import AddToArray from "./pages/AddToArray";
 import StateTest from "./pages/StateTest";
 import Effect from "./pages/Effect";
-import Coldplay from './pages/Coldplay';
-import Hidden from './pages/Hidden';
+import Coldplay from "./pages/Coldplay";
+import Hidden from "./pages/Hidden";
 
 import styled from "styled-components";
 
-const Styled = styled.nav`
-  width: 100%;
-  display: flex;
-`;
-
-const List = styled.ul`
-    display: flex;
-    padding: 15px;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    background: #6b705c;
-`;
-
-const Item = styled.li`
-    display: inline;
-    padding: 10px;
-    font-size: 1.3em;
-`;
+import "./styles/navbar.css";
 
 const Container = styled.div`
   padding: 50px;
-  color: #92593A;
+  color: #92593a;
 `;
 
-const linkStyles = {
-    color: '#ffffff',
-    textDecoration: 'none'
-}
-
 export default function Navbar() {
+  useEffect(() => {
+    document.querySelector(".navbar-toggle").addEventListener("click", () => {
+      document.querySelector(".main-nav").classList.toggle("active");
+    });
+
+    return () => {
+      document.querySelector(".navbar-toggle").removeEventListener("click", () => {
+        document.querySelector(".main-nav").classList.toggle("active");
+      });
+    }
+  }, []);
+
   return (
     <Router>
-        <Styled>
-            <List>
-                <Item>
-                <Link to="/" style={linkStyles}>Home</Link>
-                </Item>
-                <Item>
-                <Link to="/dnrm" style={linkStyles}>Dnrm</Link>
-                </Item>
-                <Item>
-                <Link to="/state-test" style={linkStyles}>State Test</Link>
-                </Item>
-                <Item>
-                <Link to="/add-to-array" style={linkStyles}>Add to array</Link>
-                </Item>
-                <Item>
-                <Link to="/effect" style={linkStyles}>useEffect Test</Link>
-                </Item>
-                <Item>
-                  <Link to="/coldplay" style={linkStyles}>Coldplay</Link>
-                </Item>
-            </List>
-        </Styled>
-        {/* A <Switch> looks through its children <Route>s and
+      <nav className="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+          <i class="fas fa-bars"></i>
+        </span>
+        <Link to="/" className="logo">
+          Home
+        </Link>
+        <ul className="main-nav">
+          <li>
+            <Link to="/dnrm" className="nav-links">
+              Dnrm
+            </Link>
+          </li>
+          <li>
+            <Link to="/state-test" className="nav-links">
+              State Test
+            </Link>
+          </li>
+          <li>
+            <Link to="/add-to-array" className="nav-links">
+              Add to array
+            </Link>
+          </li>
+          <li>
+            <Link to="/effect" className="nav-links">
+              useEffect Test
+            </Link>
+          </li>
+          <li>
+            <Link to="/coldplay" className="nav-links">
+              Coldplay
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      {/* A <Switch> looks through its children <Route>s and
                     renders the first one that matches the current URL. */}
-        <Container className="main-content">
-          <Switch>
-            <Route path="/dnrm">
-              <Dnrm />
-            </Route>
-            <Route path="/add-to-array">
-              <AddToArray />
-            </Route>
-            <Route path="/state-test">
-              <StateTest />
-            </Route>
-            <Route path="/effect">
-                <Effect />
-            </Route>
-            <Route path="/coldplay">
-              <Coldplay />
-            </Route>
-            <Route path="/hidden">
-              <Hidden />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </Container>
+      <Container className="main-content">
+        <Switch>
+          <Route path="/dnrm">
+            <Dnrm />
+          </Route>
+          <Route path="/add-to-array">
+            <AddToArray />
+          </Route>
+          <Route path="/state-test">
+            <StateTest />
+          </Route>
+          <Route path="/effect">
+            <Effect />
+          </Route>
+          <Route path="/coldplay">
+            <Coldplay />
+          </Route>
+          <Route path="/hidden">
+            <Hidden />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Container>
     </Router>
   );
 }

@@ -15,3 +15,7 @@ body {
     padding-bottom: 4em;
     min-height: 100%;
 }
+
+.active {
+    display: block;
+}
