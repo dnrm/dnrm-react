@@ -66,6 +66,11 @@ export default function Navbar() {
               Coldplay
             </Link>
           </li>
+          <li>
+            <Link to="/package" className="nav-links">
+              Package
+            </Link>
+          </li>
         </ul>
       </nav>
       {/* A <Switch> looks through its children <Route>s and
@@ -88,6 +93,9 @@ export default function Navbar() {
             <Coldplay />
           </Route>
           <Route path="/hidden">
+            <Hidden />
+          </Route>
+          <Route path="/package">
             <Hidden />
           </Route>
           <Route path="/">
