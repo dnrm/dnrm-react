@@ -1,10 +1,9 @@
 import React from "react";
-import Brb from "react-brb";
 
 const Package = () => (
   <>
     <h1>Hi</h1>
-    <Brb />
+    <span>package no work</span>
     <p>ola</p>
   </>
 );
