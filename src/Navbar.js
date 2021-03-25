@@ -8,6 +8,7 @@ import StateTest from "./pages/StateTest";
 import Effect from "./pages/Effect";
 import Coldplay from "./pages/Coldplay";
 import Hidden from "./pages/Hidden";
+import Package from './pages/Package';
 
 import styled from "styled-components";
 
@@ -96,7 +97,7 @@ export default function Navbar() {
             <Hidden />
           </Route>
           <Route path="/package">
-            <Hidden />
+            <Package />
           </Route>
           <Route path="/">
             <Home />
