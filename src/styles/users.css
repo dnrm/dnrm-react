@@ -16,3 +16,17 @@
     color: #92593A;
     text-decoration: none;
 }
+
+.delete-button {
+    margin-left: auto;
+    padding: 10px;
+    background-color: #92593A;
+    border: none;
+}
+
+.delete-button i {
+    font-size: 2em;
+    padding: 0 2px;
+    color: white;
+    cursor: pointer;
+}
