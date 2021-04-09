@@ -1,13 +1,33 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function Details(props) {
+import '../styles/details.css';
 
-    let { name } = useParams();
+export default function Details() {
+  let { id } = useParams();
+  const [user, setUser] = useState("");
 
-    return (
-        <div>
-            <h1>{name}</h1>
-        </div>
-    )
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch(
+        `https://faunadb.herokuapp.com/get-user/${id}`
+      ).then(async (response) => await response.json());
+      setUser(data["response"]);
+    };
+    fetchData();
+  }, []);
+
+  let data = user["data"];
+
+  return user ? (
+    <div className="container-user">
+      <img src={data.img} alt="" className="image-user" />
+      <h1>
+        {data.name} {data.lastname}
+      </h1>
+      <h3>{data.birthDate}</h3>
+    </div>
+  ) : (
+    <h1>Loading</h1>
+  );
 }

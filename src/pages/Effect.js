@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -27,17 +28,17 @@ export default function Effect() {
           {data.map((i) => {
 
             let name = i["data"]["name"] + ' ' + i["data"]["lastname"];
-            let encoded = encodeURI(name);
+            let ref = i["ref"]["@ref"]["id"];
 
             return (
               <>
-                <div className="user" key={i["ref"]["@ref"]["id"]}>
+                <div className="user" key={ref}>
                   <div className="image">
-                    <img src={i["data"]["img"]} alt={`${i["data"]["name"]}'s profile picture.`} className="profile-pic"/>
+                    <img src={i["data"]["img"]} alt={`${name}'s profile picture.`} className="profile-pic"/>
                   </div>
                   <div className="text">
                     <h1>
-                      <Link to={`/details/${encoded}`} className="details">{name}</Link>
+                      <Link to={`/details/${ref}`} className="details">{name}</Link>
                     </h1>
                     <h3>{i["data"]["birthDate"]}</h3>
                   </div>

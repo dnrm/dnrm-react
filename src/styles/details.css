@@ -1,0 +1,10 @@
+.container-user {
+    display: grid;
+    place-items: center;
+}
+
+.image-user {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}

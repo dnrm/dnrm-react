@@ -8,7 +8,7 @@ import StateTest from "./pages/StateTest";
 import Effect from "./pages/Effect";
 import Coldplay from "./pages/Coldplay";
 import Hidden from "./pages/Hidden";
-import Package from './pages/Package';
+// import Package from './pages/Package';
 import Details from './pages/Details';
 
 import styled from "styled-components";
@@ -36,8 +36,8 @@ export default function Navbar() {
   return (
     <Router>
       <nav className="navbar">
-        <span class="navbar-toggle" id="js-navbar-toggle">
-          <i class="fas fa-bars"></i>
+        <span className="navbar-toggle" id="js-navbar-toggle">
+          <i className="fas fa-bars"></i>
         </span>
         <Link to="/" className="logo">
           Home
@@ -94,7 +94,7 @@ export default function Navbar() {
           <Route path="/coldplay">
             <Coldplay />
           </Route>
-          <Route path="/details/:name">
+          <Route path="/details/:id">
             <Details />
           </Route>
           <Route path="/hidden">
