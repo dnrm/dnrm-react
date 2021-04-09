@@ -9132,10 +9132,10 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
-react-brb@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/react-brb/-/react-brb-1.0.7.tgz#f8c79d67bf3e3e1c1b2f877598c8b4cd3a9c7fa6"
-  integrity sha512-aKdfBERfWg6RV4IKshnDlTQK0G3B791O9rtJvOW7c8MOkJiSSn5JAoxL9Qt1Wp6UuQbkz8JHQMXLIYb9CaTeww==
+react-brb@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-brb/-/react-brb-1.0.9.tgz#7b93eaec35eac56443f5b0fc7e61696482d60844"
+  integrity sha512-6OH96fsNt44rrxz8MsvAikNsqJzVzpBPoySMyxStzzEFTtA7P9F+dAsLUW873DfiFYTxwK7u7GEO9cW2kw0PJQ==
   dependencies:
     "@babel/cli" "^7.13.10"
     "@babel/core" "^7.13.10"

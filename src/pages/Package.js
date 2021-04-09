@@ -1,12 +1,12 @@
-// import React from "react";
-// import Brb from 'react-brb';
+import React from "react";
+import { Brb } from 'react-brb';
 
-// const Package = () => (
-//   <>
-//     <h1>Hi</h1>
-//     <Brb />
-//     <p>ola</p>
-//   </>
-// );
+const Package = () => (
+  <>
+    <h1>Hi</h1>
+    <Brb />
+    <p>ola</p>
+  </>
+);
 
-// export default Package;
+export default Package;
