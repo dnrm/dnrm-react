@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 import '../styles/users.css';
 
@@ -9,7 +10,7 @@ export default function Effect() {
   useEffect(() => {
     fetch("https://faunadb.herokuapp.com/get-users")
       .then((data) => data.json())
-      .then((items) => setData(items["data"]));
+      .then((items) => setData(items["data"]))
   }, []);
 
   return (
@@ -23,22 +24,28 @@ export default function Effect() {
           <br />
           <hr />
           <br />
-          {data.map((i) => (
-            <>
-              <div className="user">
-                <div className="image">
-                  <img src={i["data"]["img"]} alt={`${i["data"]["name"]}'s profile picture.`} className="profile-pic"/>
+          {data.map((i) => {
+
+            let name = i["data"]["name"] + ' ' + i["data"]["lastname"];
+            let encoded = encodeURI(name);
+
+            return (
+              <>
+                <div className="user" key={i["ref"]["@ref"]["id"]}>
+                  <div className="image">
+                    <img src={i["data"]["img"]} alt={`${i["data"]["name"]}'s profile picture.`} className="profile-pic"/>
+                  </div>
+                  <div className="text">
+                    <h1>
+                      <Link to={`/details/${encoded}`} className="details">{name}</Link>
+                    </h1>
+                    <h3>{i["data"]["birthDate"]}</h3>
+                  </div>
                 </div>
-                <div className="text">
-                  <h1>
-                    {i["data"]["name"]} {i["data"]["lastname"]}
-                  </h1>
-                  <h3>{i["data"]["birthDate"]}</h3>
-                </div>
-              </div>
-              <br />
-            </>
-          ))}
+                <br />
+              </>
+            )
+          })}
         </>
       ) : (
         <h1>Loading...</h1>

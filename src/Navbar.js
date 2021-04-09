@@ -9,6 +9,7 @@ import Effect from "./pages/Effect";
 import Coldplay from "./pages/Coldplay";
 import Hidden from "./pages/Hidden";
 import Package from './pages/Package';
+import Details from './pages/Details';
 
 import styled from "styled-components";
 
@@ -93,12 +94,15 @@ export default function Navbar() {
           <Route path="/coldplay">
             <Coldplay />
           </Route>
+          <Route path="/details/:name">
+            <Details />
+          </Route>
           <Route path="/hidden">
             <Hidden />
           </Route>
-          <Route path="/package">
+          {/* <Route path="/package">
             <Package />
-          </Route>
+          </Route> */}
           <Route path="/">
             <Home />
           </Route>
