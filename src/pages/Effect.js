@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import useIsAdmin from '../hooks/useIsAdmin';
 
 import "../styles/users.css";
 
@@ -21,13 +22,7 @@ export default function Effect() {
     }).then(response => response.json());
   };
 
-  const isAdmin = () => {
-    let key = localStorage.getItem('key');
-    if (key === 'admin') {
-      return true;
-    }
-    return false;
-  }
+  const isAdmin = useIsAdmin();
 
   return (
     <div>
@@ -62,7 +57,7 @@ export default function Effect() {
                     </h1>
                     <h3>{i["data"]["birthDate"]}</h3>
                   </div>
-                  {isAdmin() && <button className="delete-button" value={ref} onClick={(e) => deleteUser(e)}><i className="fas fa-trash"></i></button>}
+                  {isAdmin && <button className="delete-button" value={ref} onClick={(e) => deleteUser(e)}><i className="fas fa-trash"></i></button>}
                 </div>
                 <br />
               </>
