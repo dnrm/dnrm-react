@@ -7,7 +7,7 @@ const useIsAdmin = () => {
     localStorage.getItem("key") === "admin"
       ? setIsAdmin(true)
       : setIsAdmin(false);
-  });
+  }, []);
 
   console.log(isAdmin)
   return isAdmin;
