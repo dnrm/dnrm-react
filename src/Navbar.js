@@ -10,6 +10,7 @@ import Coldplay from "./pages/Coldplay";
 import Hidden from "./pages/Hidden";
 import Package from './pages/Package';
 import Details from './pages/Details';
+import Album from './pages/Album';
 
 import styled from "styled-components";
 
@@ -102,6 +103,9 @@ export default function Navbar() {
           </Route>
           <Route path="/package">
             <Package />
+          </Route>
+          <Route path="/album/:name">
+            <Album />
           </Route>
           <Route path="/">
             <Home />
