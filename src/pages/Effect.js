@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import useIsAdmin from '../hooks/useIsAdmin';
+import CreateUser from '../components/CreateUser';
 
 import "../styles/users.css";
 
@@ -67,6 +68,7 @@ export default function Effect() {
       ) : (
         <h1>Loading...</h1>
       )}
+      <CreateUser />
     </div>
   );
 }
