@@ -15,7 +15,7 @@ export default function CreateUser() {
     const makeRequest = (url, options) => {
         let body = {
             ...options,
-            image: "https://source.unsplash.com/random/800x800",
+            img: "https://source.unsplash.com/random/800x800",
         };
 
         fetch(url, {
