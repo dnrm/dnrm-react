@@ -9,7 +9,6 @@ const useIsAdmin = () => {
       : setIsAdmin(false);
   }, []);
 
-  console.log(isAdmin)
   return isAdmin;
 };
 
