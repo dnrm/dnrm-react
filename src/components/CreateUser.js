@@ -18,6 +18,8 @@ export default function CreateUser() {
             img: "https://source.unsplash.com/random/800x800",
         };
 
+        console.log(body)
+
         fetch(url, {
             method: "post",
             body: JSON.stringify(body),
