@@ -19,3 +19,8 @@ body {
 .active {
     display: block;
 }
+
+a {
+    color: rgb(8, 144, 255);
+    text-decoration: none;
+}

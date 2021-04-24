@@ -10,7 +10,7 @@ const StyledButton = styled.button`
     border-radius: 5px;
     margin: 10px;
     background-color: ${props => props.danger ? '#d92a27' : 'white'};
-    color: white;
+    color: black;
 `;
 
 

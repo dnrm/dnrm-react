@@ -33,6 +33,7 @@ export default function Effect() {
             {data ? (
                 <>
                     <h1 style={{ fontSize: "3em" }}>Users</h1>
+                    <p>From <a href="https://fauna.com" target="_blank" rel="noreferrer">FaunaDB</a> API</p>
                     <br />
                     <hr />
                     <br />
