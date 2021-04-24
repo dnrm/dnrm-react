@@ -82,8 +82,6 @@ export default function Navbar(): React.ReactElement {
                     </li>
                 </ul>
             </nav>
-            {/* A <Switch> looks through its children <Route>s and
-                    renders the first one that matches the current URL. */}
             <Container className="main-content">
                 <Switch>
                     <Route path="/dnrm">
@@ -110,9 +108,10 @@ export default function Navbar(): React.ReactElement {
                     <Route path="/package">
                         <Package />
                     </Route>
-                    <Route path="/album/:name">
-                        <Album />
-                    </Route>
+                    <Route
+                        path="/album/:name"
+                        render={(props) => <Album {...props} />}
+                    ></Route>
                     <Route path="/">
                         <Home />
                     </Route>

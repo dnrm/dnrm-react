@@ -15,7 +15,7 @@ export default function Details() {
       setUser(data["response"]);
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   let data = user["data"];
 
