@@ -16,6 +16,14 @@ const Subtitle = styled.h3`
 `;
 
 export default function Coldplay() {
+
+    const albums = [
+        {
+            image: '',
+            name: ''
+        }
+    ]
+
     return (
         <>
             <Helmet>
