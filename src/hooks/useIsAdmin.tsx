@@ -1,5 +1,4 @@
-import { HookCallbacks } from "node:async_hooks";
-import { useState, useEffect, FunctionComponent } from "react";
+import { useState, useEffect } from "react";
 
 const useIsAdmin: Function = () => {
   const [isAdmin, setIsAdmin] = useState<boolean>(false);
