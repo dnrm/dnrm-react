@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import useIsAdmin from "../hooks/useIsAdmin";
 import CreateUser from "../components/CreateUser";
 
-import "../styles/users.css";
+import "../styles/users.scss";
 
 export default function Effect() {
     const [data, setData] = useState();
@@ -26,13 +26,13 @@ export default function Effect() {
     const isAdmin = useIsAdmin();
 
     return (
-        <div>
+        <div className="container">
             <Helmet>
                 <title>useEffect | Daniel Medina</title>
             </Helmet>
             {data ? (
                 <>
-                    <h1 style={{ fontSize: "3em" }}>Users</h1>
+                    <h1 style={{ fontSize: "3em" }} className="title">Users</h1>
                     <p>From <a href="https://fauna.com" target="_blank" rel="noreferrer">FaunaDB</a> API</p>
                     <br />
                     <hr />

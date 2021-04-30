@@ -1,3 +1,5 @@
+@import './variables';
+
 .user {
     display: flex;
     justify-content: flex-start;
@@ -9,19 +11,20 @@
     height: 100px;
     margin-right: 25px;
     border-radius: 50%;
-    border: 5px solid #92593A;
+    border: 5px solid $secondary;
 }
 
 .details {
-    color: #92593A;
+    color: $secondary;
     text-decoration: none;
 }
 
 .delete-button {
     margin-left: auto;
     padding: 10px;
-    background-color: #92593A;
+    background-color: $red;
     border: none;
+    border-radius: 5px;
 }
 
 .delete-button i {
@@ -29,4 +32,22 @@
     padding: 0 2px;
     color: white;
     cursor: pointer;
+}
+
+.container {
+    color: $text;
+}
+
+@media (prefers-color-scheme: dark) {
+    .profile-pic {
+        border: 5px solid $text-dark;
+    }
+
+    .details {
+        color: $text-dark;
+    }
+
+    .container {
+        color: $text-dark;
+    }
 }

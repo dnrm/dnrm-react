@@ -1,6 +1,8 @@
+@import './variables';
+
 .navbar {
     font-size: 18px;
-    background: rgb(107, 112, 92);
+    background: $secondary;
     padding-bottom: 10px;
 }
 

@@ -14,11 +14,11 @@ import Album from "./pages/Album";
 
 import styled from "styled-components";
 
-import "./styles/navbar.css";
+import "./styles/navbar.scss";
 
 const Container = styled.div`
     padding: 50px;
-    color: #92593a;
+    color: #fff;
 `;
 
 export default function Navbar(): React.ReactElement {
