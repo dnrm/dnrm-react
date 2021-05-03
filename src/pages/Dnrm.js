@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet';
 
-import '../styles/rainbow.css';
+import '../styles/rainbow.scss';
 
 const Title = styled.h1`
     font-size: 8em;

@@ -13,6 +13,6 @@ const StyledInput = styled.input`
 
 export default function Input(props) {
     return (
-        <StyledInput placeholder="Type here..." onChange={props.onChange}>{props.children}</StyledInput>
+        <StyledInput placeholder="Type here..." {...props}>{props.children}</StyledInput>
     )
 }

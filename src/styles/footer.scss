@@ -1,6 +1,8 @@
+@import './variables';
+
 .footer {
     color: white;
-    background-color: #073b4c;
+    background-color: $secondary;
     padding: 25px;
     bottom: 0;
     position: absolute;

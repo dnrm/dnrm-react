@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-
-const Button = styled.button`
-    border: none;
-    padding: 10px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    margin: 5px;
-`;
+import Input from '../components/Input';
+import Button from '../components/Button.js';
 
 const Item = styled.li`
     padding: 10px;
@@ -43,7 +36,7 @@ export default function AddToArray() {
             </Helmet>
             <h1>Add element to array</h1>
             <form onSubmit={e => { e.preventDefault(); handleClick(e);}}>
-                <input name="text" type="text" onChange={handleChange} value={text} />
+                <Input name="text" type="text" onChange={handleChange} value={text} />
                 <Button type="submit">Add</Button>
             </form>
             <ul>

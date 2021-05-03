@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import '../styles/album.css';
 
-export default function Album({ image, children }) {
+export default function Album({ image, children }: any) {
 
     let url = children.replace(' ', '%20')
     url = url.toLowerCase()
