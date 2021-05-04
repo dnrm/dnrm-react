@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Album from '../components/Album';
 
 import '../styles/hr.css';
+import '../styles/albums.scss';
 
 const Title = styled.h1`
     font-size: 3em;
@@ -65,11 +66,12 @@ export default function Coldplay() {
             <Title>Coldplay</Title>
             <hr />
             <Subtitle>Albums</Subtitle>
-            <ul id="albums-list">
+            <div id="albums-list">
                 {albums.map((i) => {
                     return <Album image={i.image} key={i.name}>{i.name}</Album>
                 })}
-            </ul>
+            </div>
+            <br/>
         </>
     )
 }

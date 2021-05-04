@@ -11,6 +11,7 @@ import Hidden from "./pages/Hidden";
 import Package from "./pages/Package";
 import Details from "./pages/Details";
 import Album from "./pages/Album";
+import Domains from './pages/Domains';
 
 import styled from "styled-components";
 
@@ -80,6 +81,11 @@ export default function Navbar(): React.ReactElement {
                             Package
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/domains" className="nav-links">
+                            Domains
+                        </Link>
+                    </li>
                 </ul>
             </nav>
             <Container className="main-content">
@@ -107,6 +113,9 @@ export default function Navbar(): React.ReactElement {
                     </Route>
                     <Route path="/package">
                         <Package />
+                    </Route>
+                    <Route path="/domains">
+                        <Domains />
                     </Route>
                     <Route
                         path="/album/:name"
