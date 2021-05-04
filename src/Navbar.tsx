@@ -11,7 +11,7 @@ import Hidden from "./pages/Hidden";
 import Package from "./pages/Package";
 import Details from "./pages/Details";
 import Album from "./pages/Album";
-import Domains from './pages/Domains';
+import Crypto from './pages/Crypto';
 
 import styled from "styled-components";
 
@@ -115,7 +115,7 @@ export default function Navbar(): React.ReactElement {
                         <Package />
                     </Route>
                     <Route path="/domains">
-                        <Domains />
+                        <Crypto />
                     </Route>
                     <Route
                         path="/album/:name"
