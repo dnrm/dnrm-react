@@ -48,7 +48,7 @@ export default function Domains() {
             { data ? (
                 <section id="content">
                 <h1><span>{data.symbol}</span> {data.name}</h1>
-                <h2>{Math.floor(data.priceUsd)} (USD)</h2>
+                <h2>{parseFloat(data.priceUsd).toFixed(5)} (USD)</h2>
             </section>
             ) : null}
         </div>
