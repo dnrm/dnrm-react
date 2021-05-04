@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Helmet from "react-helmet";
 import InputGroup from "../components/InputGroup";
-import Cryptocurrencies from '../components/Cryptocurrencies';
 
 export default function Domains() {
     const [asset, setAsset] = useState("");
+    const [data, setData] = useState<any>();
 
     const handleClick = (e: Event) => {
         e.preventDefault();
@@ -14,10 +14,12 @@ export default function Domains() {
                     method: "GET",
                 })
                     .then((response) => response.json())
-                    .then((response) => console.log(response))
+                    .then((response) => setData(response.data))
                     .catch((err) => {
                         console.error(err);
                     });
+
+                    console.log(data)
             } catch (err) {
                 console.error(err);
             }
@@ -42,7 +44,13 @@ export default function Domains() {
             >
                 Search
             </InputGroup>
-            <Cryptocurrencies />
+            <br/>
+            { data ? (
+                <section id="content">
+                <h1><span>{data.symbol}</span> {data.name}</h1>
+                <h2>{Math.floor(data.priceUsd)} (USD)</h2>
+            </section>
+            ) : null}
         </div>
     );
 }
