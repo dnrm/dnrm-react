@@ -4,10 +4,9 @@ import styled from 'styled-components';
 const StyledInput = styled.input`
     font-size: 1.2em;
     padding: 10px;
-    -webkit-box-shadow: 0px 5px 15px 0px rgba(148,148,148,1);
-    -moz-box-shadow: 0px 5px 15px 0px rgba(148,148,148,1);
-    box-shadow: 0px 5px 15px 0px rgba(148,148,148,1);
     border: 1px solid lightgray;
+    border-radius: ${ props => props.inputGroup ? '8px 0 0 8px' : '8px' };
+    outline: none;
 `;
 
 
