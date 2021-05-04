@@ -1,50 +1,48 @@
 import { useState } from "react";
 import Helmet from "react-helmet";
 import InputGroup from "../components/InputGroup";
+import Cryptocurrencies from '../components/Cryptocurrencies';
 
 export default function Domains() {
-    const [domain, setDomain] = useState("");
+    const [asset, setAsset] = useState("");
 
     const handleClick = (e: Event) => {
-        console.log(e);
-        try {
-            fetch(
-                `https://domain-availability-v2.p.rapidapi.com/api/v1?apiKey=undefined&domainName=${domain}&mode=DNS_ONLY&outputFormat=JSON`,
-                {
+        e.preventDefault();
+        if (asset) {
+            try {
+                fetch(`https://api.coincap.io/v2/assets/${asset}`, {
                     method: "GET",
-                    headers: {
-                        "x-rapidapi-key":
-                            "KEY",
-                        "x-rapidapi-host": "domain-availability-v2.p.rapidapi.com",
-                    },
-                }
-            ).then(response => response.json())
-            .then(response => console.log(response))
-            .catch(err => {
+                })
+                    .then((response) => response.json())
+                    .then((response) => console.log(response))
+                    .catch((err) => {
+                        console.error(err);
+                    });
+            } catch (err) {
                 console.error(err);
-            });
-        } catch (err) {
-            console.error(err);
+            }
         }
     };
 
     const handleKeyPress = (e: any) => {
-        setDomain(e.target.value);
+        setAsset(e.target.value);
     };
 
     return (
         <div>
             <Helmet>
-                <title>Domains | Daniel Medina</title>
+                <title>Crypto | Daniel Medina</title>
             </Helmet>
-            <h1>Is the domain you want available?</h1>
+            <h1>Cryptocurrency prices</h1>
+            <br />
             <InputGroup
-                onClick={handleClick}
-                value={domain}
+                value={asset}
                 onChange={handleKeyPress}
+                onSubmit={handleClick}
             >
                 Search
             </InputGroup>
+            <Cryptocurrencies />
         </div>
     );
 }

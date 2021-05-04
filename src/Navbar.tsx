@@ -82,8 +82,8 @@ export default function Navbar(): React.ReactElement {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/domains" className="nav-links">
-                            Domains
+                        <Link to="/crypto" className="nav-links">
+                            Crypto
                         </Link>
                     </li>
                 </ul>
@@ -114,7 +114,7 @@ export default function Navbar(): React.ReactElement {
                     <Route path="/package">
                         <Package />
                     </Route>
-                    <Route path="/domains">
+                    <Route path="/crypto">
                         <Crypto />
                     </Route>
                     <Route
