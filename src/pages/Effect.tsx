@@ -83,7 +83,9 @@ export default function Effect() {
             ) : (
                 <h1>Loading...</h1>
             )}
-            <CreateUser />
+            {isAdmin && (
+                <CreateUser />
+            )}
         </div>
     );
 }

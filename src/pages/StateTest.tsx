@@ -16,7 +16,7 @@ export default function StateTest(props: any) {
 
     useEffect(() => {
         setMessage(props.message);
-    }, [])
+    }, [props.message])
 
     const handleChange = (event: Event) => {
         // @ts-ignore
