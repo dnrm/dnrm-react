@@ -12,7 +12,7 @@ export default function InputGroup(props: any) {
                     value={props.value}
                     onChange={props.onChange}
                 />
-                <Button inputGroup type="submit" {...props}>
+                <Button inputGroup type="submit">
                     {props.children}
                 </Button>
             </form>

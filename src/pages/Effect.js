@@ -69,7 +69,7 @@ export default function Effect() {
                                             value={ref}
                                             onClick={(e) => deleteUser(e)}
                                         >
-                                            <i className="fas fa-trash"></i>
+                                            <i class="fas fa-times"></i>
                                         </button>
                                     )}
                                 </div>

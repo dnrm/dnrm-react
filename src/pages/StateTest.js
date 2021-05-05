@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
@@ -11,8 +11,12 @@ const StyledDiv = styled.form`
     justify-content: center;
 `;
 
-export default function StateTest() {
+export default function StateTest(props) {
     const [message, setMessage] = useState("")
+
+    useEffect(() => {
+        setMessage(props.message);
+    }, [])
 
     const handleChange = (event) => {
         setMessage(event.target.value);
@@ -29,8 +33,8 @@ export default function StateTest() {
             </Helmet>
             <p>Your mesage: {message ? message : 'Nothing'}</p>
             <StyledDiv onSubmit={e => {e.preventDefault(); submit(e);}}>
-                <Input type="text" onChange={handleChange} />
-                <Button type="submit">Submit</Button>
+                <Input type="text" onChange={handleChange} value={message} inputGroup />
+                <Button type="submit" inputGroup >Submit</Button>
             </StyledDiv>
         </div>
     )

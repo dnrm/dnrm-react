@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useLocation,
+} from "react-router-dom";
 
 import Home from "./pages/Home";
 import Dnrm from "./pages/Dnrm";
@@ -11,7 +17,7 @@ import Hidden from "./pages/Hidden";
 import Package from "./pages/Package";
 import Details from "./pages/Details";
 import Album from "./pages/Album";
-import Crypto from './pages/Crypto';
+import Crypto from "./pages/Crypto";
 
 import styled from "styled-components";
 
@@ -22,7 +28,20 @@ const Container = styled.div`
     color: #fff;
 `;
 
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
+
 export default function Navbar(): React.ReactElement {
+    return (
+        <Router>
+            <Nav />
+        </Router>
+    );
+}
+
+const Nav = () => {
+
     useEffect(() => {
         document
             .querySelector(".navbar-toggle")!
@@ -41,8 +60,10 @@ export default function Navbar(): React.ReactElement {
         };
     }, []);
 
+    let query = useQuery();
+
     return (
-        <Router>
+        <>
             <nav className="navbar">
                 <span className="navbar-toggle" id="js-navbar-toggle">
                     <i className="fas fa-bars"></i>
@@ -97,7 +118,7 @@ export default function Navbar(): React.ReactElement {
                         <AddToArray />
                     </Route>
                     <Route path="/state-test">
-                        <StateTest />
+                        <StateTest message={query.get("message")} />
                     </Route>
                     <Route path="/effect">
                         <Effect />
@@ -126,6 +147,6 @@ export default function Navbar(): React.ReactElement {
                     </Route>
                 </Switch>
             </Container>
-        </Router>
+        </>
     );
-}
+};
