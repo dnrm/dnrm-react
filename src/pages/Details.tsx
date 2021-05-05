@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import '../styles/details.css';
 
 export default function Details() {
-  let { id } = useParams();
-  const [user, setUser] = useState("");
+  let { id } = useParams<any>();
+  const [user, setUser] = useState<any>("");
 
   useEffect(() => {
     const fetchData = async () => {

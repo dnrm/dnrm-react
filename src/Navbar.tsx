@@ -140,7 +140,7 @@ const Nav = () => {
                     </Route>
                     <Route
                         path="/album/:name"
-                        render={(props) => <Album {...props} />}
+                        render={(props) => <Album name="" image="" {...props} />}
                     ></Route>
                     <Route path="/">
                         <Home />

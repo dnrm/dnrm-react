@@ -16,7 +16,7 @@ export default function Effect() {
             .then((items) => setData(items["data"]));
     }, []);
 
-    const deleteUser = (e) => {
+    const deleteUser = (e: any) => {
         let id = e.target.parentNode.value;
         return fetch("https://faunadb.herokuapp.com/delete-user/" + id, {
             method: "delete",
@@ -37,7 +37,9 @@ export default function Effect() {
                     <br />
                     <hr />
                     <br />
-                    {data.map((i) => {
+                    {
+                    // @ts-ignore
+                    data.map((i: any) => {
                         let name =
                             i["data"]["name"] + " " + i["data"]["lastname"];
                         let ref = i["ref"]["@ref"]["id"];
@@ -69,7 +71,7 @@ export default function Effect() {
                                             value={ref}
                                             onClick={(e) => deleteUser(e)}
                                         >
-                                            <i class="fas fa-times"></i>
+                                            <i className="fas fa-times"></i>
                                         </button>
                                     )}
                                 </div>

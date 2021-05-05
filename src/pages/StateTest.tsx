@@ -11,18 +11,20 @@ const StyledDiv = styled.form`
     justify-content: center;
 `;
 
-export default function StateTest(props) {
+export default function StateTest(props: any) {
     const [message, setMessage] = useState("")
 
     useEffect(() => {
         setMessage(props.message);
     }, [])
 
-    const handleChange = (event) => {
+    const handleChange = (event: Event) => {
+        // @ts-ignore
         setMessage(event.target.value);
     }
 
-    const submit = (event) => {
+    const submit = (event: any) => {
+        // @ts-ignore
         window.location = `/state-test?message=${message}`;
     }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Input from '../components/Input';
-import Button from '../components/Button.js';
+import Button from '../components/Button';
 
 const Item = styled.li`
     padding: 10px;
@@ -17,15 +17,15 @@ const Item = styled.li`
 export default function AddToArray() {
 
     const [text, setText] = useState('');
-    const [messages, setMessage] = useState([]);
+    const [messages, setMessage] = useState<Array<any>>([]);
 
-    const handleChange = (e) => {
-        setText(e.target.value, console.log(text));
+    const handleChange = (e: any) => {
+        setText(e.target.value);
     }
 
-    const handleClick = (e) => {
+    const handleClick = (e: any) => {
         
-        setMessage([...messages, text], console.log(messages));
+        setMessage([...messages, text]);
         setText('');
     }
 

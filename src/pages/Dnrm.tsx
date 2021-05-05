@@ -50,8 +50,8 @@ function Dnrm() {
             <Title className="gradient-text">ReactJS</Title>
             <Paragraph>{count} {count === 69 ? 'nice' : ''}</Paragraph>
             <ButtonContainer>
-                <Button onClick={minusOne} tabIndex="1">-1</Button>
-                <Button onClick={plusOne} tabIndex="2">+1</Button>
+                <Button onClick={minusOne} tabIndex={1}>-1</Button>
+                <Button onClick={plusOne} tabIndex={2}>+1</Button>
             </ButtonContainer>
         </>
     )
