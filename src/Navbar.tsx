@@ -18,6 +18,7 @@ import Package from "./pages/Package";
 import Details from "./pages/Details";
 import Album from "./pages/Album";
 import Crypto from "./pages/Crypto";
+import Users from './pages/Users';
 
 import styled from "styled-components";
 
@@ -107,6 +108,11 @@ const Nav = () => {
                             Crypto
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/users" className="nav-links">
+                            Users
+                        </Link>
+                    </li>
                 </ul>
             </nav>
             <Container className="main-content">
@@ -137,6 +143,9 @@ const Nav = () => {
                     </Route>
                     <Route path="/crypto">
                         <Crypto />
+                    </Route>
+                    <Route path="/users">
+                        <Users />
                     </Route>
                     <Route
                         path="/album/:name"
