@@ -36,7 +36,7 @@ jobs:
           # Required recipients' addresses:
           to: daniel@medina.com
           # Required sender full name (address can be skipped):
-          from: actions@danielmedina.dev # <user@example.com>
+          from: Github Actions <actions@danielmedina.dev>
           # Optional whether this connection use TLS (default is true if server_port is 465)
           secure: true
           # Optional plain body:
