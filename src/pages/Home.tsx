@@ -9,10 +9,9 @@ export default function Home() {
                 <title>Home | Daniel Medina</title>
             </Helmet>
             <section id="main">
-                <h1>dnrm</h1>
+                <h1 className="text-4xl py-4 font-black">dnrm</h1>
                 <hr />
-                <h3>Web Developer</h3>
-                <br />
+                <h3 className="text-2xl py-2 font-bold">Web Developer</h3>
                 <p>I am a web developer who likes working with JavaScript</p>
                 <p>
                     I'm a web developer from Mexico. I like to work the most

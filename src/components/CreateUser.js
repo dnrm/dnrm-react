@@ -45,6 +45,8 @@ export default function CreateUser() {
                             name="name"
                             id="name"
                             placeholder="Name"
+                            className="rounded-lg"
+                            required
                         />
                     </div>
                     <div className="input">
@@ -54,6 +56,8 @@ export default function CreateUser() {
                             name="lastname"
                             id="lastname"
                             placeholder="Lastname"
+                            className="rounded-lg"
+                            required
                         />
                     </div>
                     <div className="input">
@@ -63,11 +67,13 @@ export default function CreateUser() {
                             name="birthdate"
                             id="birthdate"
                             placeholder="Birth date"
+                            className="rounded-lg"
+                            required
                         />
                     </div>
                 </div>
                 <br />
-                <button id="create-user-button">Create user</button>
+                <button id="create-user-button" className="text-gray-800">Create user</button>
             </form>
         </div>
     );

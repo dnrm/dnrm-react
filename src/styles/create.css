@@ -26,6 +26,7 @@
 .input input {
     font-size: 1.2em;
     padding: 10px;
+    color: black;
     border: 1px #ccc solid;
     width: 100%;
 }
