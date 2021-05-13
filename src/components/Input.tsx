@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const StyledInput = styled.input`
+const StyledInput = styled.input<any>`
     font-size: 1.2em;
     padding: 10px;
     border: 1px solid lightgray;
@@ -11,7 +10,7 @@ const StyledInput = styled.input`
 `;
 
 
-export default function Input(props) {
+export default function Input(props: any) {
     return (
         <StyledInput placeholder="Type here..." {...props}>{props.children}</StyledInput>
     )
