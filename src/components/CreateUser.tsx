@@ -3,7 +3,7 @@ import "../styles/create.css";
 
 export default function CreateUser() {
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         makeRequest(`https://faunadb.herokuapp.com/create-user`, {
             name: e.target[0].value,
@@ -12,7 +12,7 @@ export default function CreateUser() {
         });
     };
 
-    const makeRequest = (url, options) => {
+    const makeRequest = (url: string, options: Object) => {
         let body = {
             ...options,
             img: "https://source.unsplash.com/random/800x800",
