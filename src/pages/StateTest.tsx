@@ -29,12 +29,13 @@ export default function StateTest(props: any) {
     }
 
     return (
-        <div>
+        <div className="flex justify-center items-center flex-col">
             <Helmet>
                 <title>State Test | Daniel Medina</title>
             </Helmet>
             <p>Your mesage: {message ? message : 'Nothing'}</p>
-            <StyledDiv onSubmit={e => {e.preventDefault(); submit(e);}}>
+            <br />
+            <StyledDiv onSubmit={e => {e.preventDefault(); submit(e);}} style={{ maxWidth: '768px' }}>
                 <Input type="text" onChange={handleChange} value={message} inputGroup />
                 <Button type="submit" inputGroup >Submit</Button>
             </StyledDiv>

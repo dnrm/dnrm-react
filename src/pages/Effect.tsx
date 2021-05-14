@@ -30,25 +30,21 @@ export default function Effect() {
             <Helmet>
                 <title>useEffect | Daniel Medina</title>
             </Helmet>
+            <h1 style={{ fontSize: "3em" }} className="title">
+                Users
+            </h1>
+            <p>
+                From{" "}
+                <a href="https://fauna.com" target="_blank" rel="noreferrer">
+                    FaunaDB
+                </a>{" "}
+                API
+            </p>
+            <br />
+            <hr />
+            <br />
             {data ? (
                 <>
-                    <h1 style={{ fontSize: "3em" }} className="title">
-                        Users
-                    </h1>
-                    <p>
-                        From{" "}
-                        <a
-                            href="https://fauna.com"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            FaunaDB
-                        </a>{" "}
-                        API
-                    </p>
-                    <br />
-                    <hr />
-                    <br />
                     {
                         // @ts-ignore
                         data.map((i: any) => {

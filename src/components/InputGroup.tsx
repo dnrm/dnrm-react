@@ -6,7 +6,7 @@ import Button from "../components/Button";
 export default function InputGroup(props: any) {
     return (
         <div className="flex">
-            <form onSubmit={props.onSubmit} style={{ display: 'flex' }}>
+            <form onSubmit={props.onSubmit} style={{ display: 'flex', width: '100%' }} className="w-4/5">
                 <Input
                     inputGroup
                     value={props.value}

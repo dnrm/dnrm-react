@@ -7,6 +7,7 @@ const StyledInput = styled.input<any>`
     border-radius: ${ props => props.inputGroup ? '8px 0 0 8px' : '8px' };
     outline: none;
     color: black;
+    width: 100%;
 `;
 
 
