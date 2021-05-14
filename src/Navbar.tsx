@@ -18,7 +18,7 @@ import Package from "./pages/Package";
 import Details from "./pages/Details";
 import Album from "./pages/Album";
 import Crypto from "./pages/Crypto";
-import Users from './pages/Users';
+import Users from "./pages/Users";
 
 import styled from "styled-components";
 
@@ -42,7 +42,6 @@ export default function Navbar(): React.ReactElement {
 }
 
 const Nav = () => {
-
     useEffect(() => {
         document
             .querySelector(".navbar-toggle")!
@@ -149,7 +148,9 @@ const Nav = () => {
                     </Route>
                     <Route
                         path="/album/:name"
-                        render={(props) => <Album name="" image="" {...props} />}
+                        render={(props) => (
+                            <Album name="" image="" {...props} />
+                        )}
                     ></Route>
                     <Route path="/">
                         <Home />

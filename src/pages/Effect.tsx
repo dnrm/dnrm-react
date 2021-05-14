@@ -32,60 +32,84 @@ export default function Effect() {
             </Helmet>
             {data ? (
                 <>
-                    <h1 style={{ fontSize: "3em" }} className="title">Users</h1>
-                    <p>From <a href="https://fauna.com" target="_blank" rel="noreferrer">FaunaDB</a> API</p>
+                    <h1 style={{ fontSize: "3em" }} className="title">
+                        Users
+                    </h1>
+                    <p>
+                        From{" "}
+                        <a
+                            href="https://fauna.com"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            FaunaDB
+                        </a>{" "}
+                        API
+                    </p>
                     <br />
                     <hr />
                     <br />
                     {
-                    // @ts-ignore
-                    data.map((i: any) => {
-                        let name =
-                            i["data"]["name"] + " " + i["data"]["lastname"];
-                        let ref = i["ref"]["@ref"]["id"];
+                        // @ts-ignore
+                        data.map((i: any) => {
+                            let name =
+                                i["data"]["name"] + " " + i["data"]["lastname"];
+                            let ref = i["ref"]["@ref"]["id"];
 
-                        return (
-                            <>
-                                <div className="user" key={ref}>
-                                    <div className="image">
-                                        <img
-                                            src={i["data"]["img"]}
-                                            alt={`${name}'s profile picture.`}
-                                            className="profile-pic"
-                                        />
-                                    </div>
-                                    <div className="text">
-                                        <h1>
-                                            <Link
-                                                to={`/details/${ref}`}
-                                                className="details"
+                            return (
+                                <>
+                                    <div className="user" key={ref}>
+                                        <div className="image">
+                                            <img
+                                                src={i["data"]["img"]}
+                                                alt={`${name}'s profile picture.`}
+                                                className="profile-pic"
+                                            />
+                                        </div>
+                                        <div className="text">
+                                            <h1>
+                                                <Link
+                                                    to={`/details/${ref}`}
+                                                    className="details"
+                                                >
+                                                    {name}
+                                                </Link>
+                                            </h1>
+                                            <h3>{i["data"]["birthDate"]}</h3>
+                                        </div>
+                                        {isAdmin && (
+                                            <button
+                                                className="delete-button p-0"
+                                                value={ref}
+                                                onClick={(e) => deleteUser(e)}
                                             >
-                                                {name}
-                                            </Link>
-                                        </h1>
-                                        <h3>{i["data"]["birthDate"]}</h3>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="ionicon bg-transparent text-white h-5"
+                                                    viewBox="0 0 512 512"
+                                                >
+                                                    <path
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="50"
+                                                        d="M368 368L144 144M368 144L144 368"
+                                                    />
+                                                </svg>
+                                            </button>
+                                        )}
                                     </div>
-                                    {isAdmin && (
-                                        <button
-                                            className="delete-button"
-                                            value={ref}
-                                            onClick={(e) => deleteUser(e)}
-                                        >
-                                            <i className="fas fa-times"></i>
-                                        </button>
-                                    )}
-                                </div>
-                                <br />
-                            </>
-                        );
-                    })}
+                                    <br />
+                                </>
+                            );
+                        })
+                    }
                 </>
             ) : (
                 <h1>Loading...</h1>
             )}
-            {isAdmin && (
-                <CreateUser />
-            )}
+            {isAdmin && <CreateUser />}
         </div>
     );
 }
