@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import { Helmet } from 'react-helmet';
+import anime from 'animejs';
 
 import '../styles/rainbow.scss';
 
@@ -34,6 +35,15 @@ const ButtonContainer = styled.div`
 
 function Dnrm() {
     const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        anime({
+            targets: '.count',
+            duration: 100,
+            scale: 1.5,
+            direction: 'alternate'
+        })
+    }, [count])
     
     const plusOne = () => {
         setCount(count + 1);
@@ -48,7 +58,7 @@ function Dnrm() {
                 <title>Dnrm | Daniel Medina</title>
             </Helmet>
             <Title className="gradient-text">ReactJS</Title>
-            <Paragraph>{count} {count === 69 ? 'nice' : ''}</Paragraph>
+            <Paragraph className="count">{count} {count === 69 ? 'nice' : ''}</Paragraph>
             <ButtonContainer>
                 <Button onClick={minusOne} tabIndex={1}>-1</Button>
                 <Button onClick={plusOne} tabIndex={2}>+1</Button>
