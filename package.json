@@ -84,8 +84,8 @@
   },
   "scripts": {
     "start": "craco start",
-     "build": "craco build",
-     "test": "craco test"
+    "build": "craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [
