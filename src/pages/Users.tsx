@@ -27,7 +27,7 @@ const Users = (props: any) => {
                 <Card
                     title="John Doe"
                     image="https://source.unsplash.com/random?wallpaper"
-                    link="/users/generic-user"
+                    link="generic-user"
                 >
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Error nemo eaque beatae tenetur placeat. Iste repellendus
@@ -37,7 +37,7 @@ const Users = (props: any) => {
                 <Card
                     title="John Doe"
                     image="https://source.unsplash.com/random?wallpaper"
-                    link="/users/generic-user"
+                    link="generic-user"
                 >
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Consequatur libero autem vitae ex voluptas, cumque fuga
@@ -47,7 +47,7 @@ const Users = (props: any) => {
                 <Card
                     title="John Doe"
                     image="https://source.unsplash.com/random?wallpaper"
-                    link="/users/generic-user"
+                    link="generic-user"
                 >
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Consequatur libero autem vitae ex voluptas, cumque fuga
@@ -57,7 +57,7 @@ const Users = (props: any) => {
                 <Card
                     title="John Doe"
                     image="https://source.unsplash.com/random?wallpaper"
-                    link="/users/generic-user"
+                    link="generic-user"
                 >
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Consequatur libero autem vitae ex voluptas, cumque fuga
