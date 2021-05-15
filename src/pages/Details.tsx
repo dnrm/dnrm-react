@@ -10,7 +10,7 @@ export default function Details() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://faunadb.herokuapp.com/get-user/${id}`
+        `https://medina.dev/faunadb/get-user/${id}`
       ).then(async (response) => await response.json());
       setUser(data["response"]);
     };

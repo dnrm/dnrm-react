@@ -6,7 +6,7 @@ const Users = (props: any) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch("https://faunadb.herokuapp.com/get-users")
+        fetch("https://medina.dev/faunadb/get-users")
             .then((data) => data.json())
             .then((items) => setData(items["data"]));
     }, []);

@@ -5,7 +5,7 @@ export default function CreateUser() {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        makeRequest(`https://faunadb.herokuapp.com/create-user`, {
+        makeRequest(`https://medina.dev/faunadb/create-user`, {
             name: e.target[0].value,
             lastname: e.target[1].value,
             birthDate: e.target[2].value,

@@ -11,14 +11,14 @@ export default function Effect() {
     const [data, setData] = useState();
 
     useEffect(() => {
-        fetch("https://faunadb.herokuapp.com/get-users")
+        fetch("https://medina.dev/faunadb/get-users")
             .then((data) => data.json())
             .then((items) => setData(items["data"]));
     }, []);
 
     const deleteUser = (e: any) => {
         let id = e.target.parentNode.value;
-        return fetch("https://faunadb.herokuapp.com/delete-user/" + id, {
+        return fetch("https://medina.dev/faunadb/delete-user/" + id, {
             method: "delete",
         }).then((response) => response.json());
     };
