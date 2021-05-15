@@ -11,6 +11,8 @@ export default function InputGroup(props: any) {
                     inputGroup
                     value={props.value}
                     onChange={props.onChange}
+                    className={props.className}
+                    list={props.list}
                 />
                 <Button inputGroup type="submit">
                     {props.children}

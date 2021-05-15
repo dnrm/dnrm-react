@@ -7,6 +7,7 @@ import Icons from "../components/Icons";
 export default function Domains() {
     const [asset, setAsset] = useState("");
     const [data, setData] = useState<any>();
+    const [status, setStatus] = useState<number>();
 
     const handleClick = (e: Event) => {
         e.preventDefault();
@@ -15,6 +16,10 @@ export default function Domains() {
             duration: 500,
             easing: "easeInOutBack",
             direction: "normal",
+            // keyframes: [
+            //     { filter: 'blur(15px)' },
+            //     { filter: 'blur(0px)' },
+            // ],
             keyframes: [
                 { opacity: 0, scale: 0.5, skew: 60 },
                 { opacity: 1, scale: 1, skew: 0 },
@@ -31,8 +36,20 @@ export default function Domains() {
                         method: "GET",
                     }
                 )
-                    .then((response) => response.json())
-                    .then((response) => setData(response.data))
+                    .then((response) => {
+                        if (response.ok) {
+                            setStatus(200);
+                            console.log('ok')
+                            return response;
+                        } else {
+                            setStatus(404)
+                            throw new Error('404')
+                        }
+                    })
+                    .then(response => response.json())
+                    .then((response) => {
+                        setData(response.data);
+                    })
                     .catch((err) => {
                         console.error(err);
                     });
@@ -72,7 +89,7 @@ export default function Domains() {
                         value={asset}
                         onChange={handleKeyPress}
                         onSubmit={handleClick}
-                        className="w-full"
+                        className="w-full crypto-input"
                     >
                         Search
                     </InputGroup>
@@ -86,17 +103,30 @@ export default function Domains() {
                             id="content"
                             className="flex justify-center items-center flex-row md:pt-0 pt-10"
                         >
-                            <div className="icon pr-4">
-                                <Icons id={data.symbol.toLowerCase()} />
-                            </div>
-                            <div className="text">
-                                <h1 className="text-6xl">
-                                    <span>{data.symbol}</span> {data.name}
-                                </h1>
-                                <h2 className="text-2xl">
-                                    {parseFloat(data.priceUsd).toFixed(5)} (USD)
-                                </h2>
-                            </div>
+                            {status === 200 ? (
+                                <>
+                                    <div className="icon pr-4">
+                                        <Icons id={data.symbol.toLowerCase()} />
+                                    </div>
+                                    <div className="text">
+                                        <h1 className="text-6xl">
+                                            <span>{data.symbol}</span>{" "}
+                                            {data.name}
+                                        </h1>
+                                        <h2 className="text-2xl">
+                                            {parseFloat(data.priceUsd).toFixed(
+                                                5
+                                            )}{" "}
+                                            (USD)
+                                        </h2>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <i className="fas fa-ban text-5xl pr-4"></i>
+                                    <h1 className="text-5xl">Coin not found</h1>
+                                </>
+                            )}
                         </section>
                     ) : null}
                 </section>
