@@ -13,6 +13,7 @@ export default function InputGroup(props: any) {
                     onChange={props.onChange}
                     className={props.className}
                     list={props.list}
+                    style={{ maxWidth: '768px'}}
                 />
                 <Button inputGroup type="submit">
                     {props.children}
