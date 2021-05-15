@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 export default function Home() {
     return (
-        <Layout>
+        <Layout img="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
             <Helmet>
                 <title>Home | Daniel Medina</title>
             </Helmet>
@@ -12,8 +12,9 @@ export default function Home() {
                 <img
                     src="https://danielmedina.dev/assets/v.jpg"
                     alt="Daniel Medina"
-                    className="float-left w-36 h-36 mb-px object-cover rounded-full mr-4 border-white border-4"
+                    className="float-left w-36 h-36 mb-px absolute top-36 ml-6 object-cover rounded-full mr-4 border-white border-4"
                 />
+                <br /><br />
                 <h1 className="text-4xl py-2">Daniel Medina</h1>
                 <hr />
                 <div className="about mt-2">
@@ -23,7 +24,7 @@ export default function Home() {
                         with javascript. I am really passionate about my coding
                         projcets. I started back in January of 2020.
                     </p>
-                    <p className="p-2">
+                    <p>
                         Hello, my name is Daniel Medina and I am a full stack
                         web developer. I work the most with JavaScript,
                         primarily with Angular and NodeJs. I started my career
@@ -32,7 +33,7 @@ export default function Home() {
                         invest in learning technologies that would allow me to
                         create a lot of content and digital media.
                     </p>
-                    <p className="p-2">
+                    <p>
                         I am a web developer from Mexico. I love programming and
                         creating things. My JavaScript framework of choice is
                         Angular. I started my journey in web development in

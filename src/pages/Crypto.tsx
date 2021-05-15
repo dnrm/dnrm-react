@@ -43,12 +43,14 @@ export default function Domains() {
                             return response;
                         } else {
                             setStatus(404)
+                            setData({})
                             throw new Error('404')
                         }
                     })
                     .then(response => response.json())
                     .then((response) => {
-                        setData(response.data);
+                        console.log(response)
+                        setData(response.data)
                     })
                     .catch((err) => {
                         console.error(err);
@@ -93,42 +95,43 @@ export default function Domains() {
                     >
                         Search
                     </InputGroup>
+                    <p className="text-gray-300 py-1 text-sm">Example: bitcoin, dogecoin, ethereum...</p>
                 </section>
                 <section
                     id="results"
                     className="p-0 flex justify-center items-center min-h-full"
                 >
-                    {data ? (
-                        <section
+                    <section
                             id="content"
                             className="flex justify-center items-center flex-row md:pt-0 pt-10"
                         >
-                            {status === 200 ? (
-                                <>
-                                    <div className="icon pr-4">
-                                        <Icons id={data.symbol.toLowerCase()} />
+                            {data && (
+                                status === 200 ? (
+                                    <>
+                                        <div className="icon pr-4">
+                                            <Icons id={data.symbol ? data.symbol.toLowerCase() : null} />
+                                        </div>
+                                        <div className="text">
+                                            <h1 className="text-6xl">
+                                                <span>{data.symbol}</span>{" "}
+                                                {data.name}
+                                            </h1>
+                                            <h2 className="text-2xl">
+                                                {parseFloat(data.priceUsd).toFixed(
+                                                    5
+                                                )}{" "}
+                                                (USD)
+                                            </h2>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className="mt-2 flex justify-center items-center">
+                                        <i className="fas fa-ban text-5xl pr-4"></i>
+                                        <h1 className="text-5xl">Coin not found</h1>
                                     </div>
-                                    <div className="text">
-                                        <h1 className="text-6xl">
-                                            <span>{data.symbol}</span>{" "}
-                                            {data.name}
-                                        </h1>
-                                        <h2 className="text-2xl">
-                                            {parseFloat(data.priceUsd).toFixed(
-                                                5
-                                            )}{" "}
-                                            (USD)
-                                        </h2>
-                                    </div>
-                                </>
-                            ) : (
-                                <>
-                                    <i className="fas fa-ban text-5xl pr-4"></i>
-                                    <h1 className="text-5xl">Coin not found</h1>
-                                </>
+                                )
                             )}
                         </section>
-                    ) : null}
                 </section>
             </section>
         </div>

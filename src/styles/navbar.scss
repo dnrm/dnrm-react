@@ -11,22 +11,28 @@
     display: none;
 }
 
-.nav-links,
 .logo {
     text-decoration: none;
     color: white;
+    padding-left: 15px;
+    vertical-align: middle;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
 }
 
 .main-nav li {
     text-align: left;
-    margin: 15px 15px;
 }
 
 .logo {
     display: inline-block;
     font-size: 22px;
-    margin-top: 10px;
-    margin-left: 20px;
+    padding-top: 10px;
 }
 
 .navbar-toggle {
@@ -47,7 +53,6 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
-        height: 70px;
         align-items: center;
     }
 
@@ -63,7 +68,7 @@
     }
 
     .nav-links {
-        margin-left: 40px;
+        margin-left: 20px;
     }
 
     .logo {

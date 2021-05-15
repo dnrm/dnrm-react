@@ -4,6 +4,7 @@ import {
     Switch,
     Route,
     Link,
+    NavLink,
     useLocation,
 } from "react-router-dom";
 
@@ -73,44 +74,44 @@ const Nav = () => {
                 </Link>
                 <ul className="main-nav">
                     <li>
-                        <Link to="/dnrm" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/dnrm" className="nav-links">
                             Dnrm
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/state-test" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/state-test" className="nav-links">
                             State Test
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/add-to-array" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/add-to-array" className="nav-links">
                             Add to array
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/effect" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/effect" className="nav-links">
                             useEffect Test
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/coldplay" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/coldplay" className="nav-links">
                             Coldplay
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/package" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/package" className="nav-links">
                             Package
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/crypto" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/crypto" className="nav-links">
                             Crypto
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/users" className="nav-links">
+                        <NavLink activeClassName="activeLink" to="/users" className="nav-links">
                             Users
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
