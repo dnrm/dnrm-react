@@ -21,7 +21,7 @@ const Card = (props: Props) => {
             <div className="grid p-5 grid-cols-1 md:grid-cols-2 md:grid-rows-1 grid-rows-2 h-full">
                 <div className="image">
                     <Link
-                        to={`${props.link}`}
+                        to={`users/${props.link}`}
                         className="no-underline h-full pt-4 md:pt-0 bg-top md:h-full w-full rounded-md block bg-cover"
                         style={{ backgroundImage: `url(${image}?date=${Math.random()})` }}
                     >
