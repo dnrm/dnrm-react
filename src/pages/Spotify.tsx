@@ -9,7 +9,7 @@ const Spotify = () => {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         try {
-            fetch(`http://localhost:8080/search/${song}`)
+            fetch(`https://medina.dev/spotify/search/${song}`)
             .then(r => {
                 if (r.ok) {
                     return r
