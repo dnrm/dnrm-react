@@ -20,6 +20,7 @@ import Details from "./pages/Details";
 import Album from "./pages/Album";
 import Crypto from "./pages/Crypto";
 import Users from "./pages/Users";
+import Spotify from "./pages/Spotify";
 
 import styled from "styled-components";
 
@@ -113,6 +114,11 @@ const Nav = () => {
                             Users
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink activeClassName="activeLink" to="/spotify" className="nav-links">
+                            Spotify
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
             <Container className="main-content">
@@ -146,6 +152,9 @@ const Nav = () => {
                     </Route>
                     <Route path="/users">
                         <Users />
+                    </Route>
+                    <Route path="/spotify">
+                        <Spotify />
                     </Route>
                     <Route
                         path="/album/:name"
