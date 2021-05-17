@@ -21,6 +21,7 @@ import Album from "./pages/Album";
 import Crypto from "./pages/Crypto";
 import Users from "./pages/Users";
 import Spotify from "./pages/Spotify";
+import Postgresql from './pages/Postgresql';
 
 import styled from "styled-components";
 
@@ -119,6 +120,11 @@ const Nav = () => {
                             Spotify
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink activeClassName="activeLink" to="/postgresql" className="nav-links">
+                            PostgreSQL
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
             <Container className="main-content">
@@ -155,6 +161,9 @@ const Nav = () => {
                     </Route>
                     <Route path="/spotify">
                         <Spotify />
+                    </Route>
+                    <Route path="/postgresql">
+                        <Postgresql />
                     </Route>
                     <Route
                         path="/album/:name"
