@@ -21,9 +21,6 @@ const Users = (props: any) => {
                 <hr />
             </header>
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-4">
-                {/* {data.map((i) => {
-                    console.log(i);
-                })} */}
                 <Card
                     title="John Doe"
                     image="https://source.unsplash.com/random?wallpaper"
