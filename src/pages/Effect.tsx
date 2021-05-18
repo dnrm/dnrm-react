@@ -88,8 +88,8 @@ export default function Effect() {
                                                         fill="none"
                                                         stroke="currentColor"
                                                         stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        stroke-width="50"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth="50"
                                                         d="M368 368L144 144M368 144L144 368"
                                                     />
                                                 </svg>

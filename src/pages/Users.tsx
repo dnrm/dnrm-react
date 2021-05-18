@@ -1,16 +1,7 @@
-import React, { useState, useEffect } from "react";
 import Card from "../components/Card";
 import { Helmet } from "react-helmet";
 
 const Users = (props: any) => {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        fetch("https://medina.dev/faunadb/get-users")
-            .then((data) => data.json())
-            .then((items) => setData(items["data"]));
-    }, []);
-
     return (
         <>
             <Helmet>

@@ -22,6 +22,10 @@ import Crypto from "./pages/Crypto";
 import Users from "./pages/Users";
 import Spotify from "./pages/Spotify";
 import Postgresql from './pages/Postgresql';
+import Account from './pages/Account';
+
+import SignUp from './components/SignUp';
+import Login from './components/Login';
 
 import styled from "styled-components";
 
@@ -125,6 +129,11 @@ const Nav = () => {
                             PostgreSQL
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink activeClassName="activeLink" to="/account" className="nav-links">
+                            Account
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
             <Container className="main-content">
@@ -164,6 +173,15 @@ const Nav = () => {
                     </Route>
                     <Route path="/postgresql">
                         <Postgresql />
+                    </Route>
+                    <Route path="/account">
+                        <Account />
+                    </Route>
+                    <Route path="/signup">
+                        <SignUp />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
                     </Route>
                     <Route
                         path="/album/:name"
