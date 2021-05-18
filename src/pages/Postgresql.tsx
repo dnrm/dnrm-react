@@ -51,7 +51,7 @@ const Postgresql = (props: any) => {
                               >
                                   <div className="user_title">
                                       <h3 className="text-2xl">
-                                          {i.username + " - "}
+                                      {i.username + " - "}
                                       </h3>
                                       <span className="text-xs joined_on">
                                           {" "}
@@ -62,7 +62,7 @@ const Postgresql = (props: any) => {
                                       </span>
                                   </div>
                                   <p className="block">
-                                      <a href={i.email}>{i.email}</a>
+                                  <i className="fas fa-envelope"></i><a href={i.email}>{i.email}</a>
                                   </p>
                               </div>
                               

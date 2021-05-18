@@ -10,7 +10,7 @@ const Package = () => (
             <title>Package | Daniel Medina</title>
         </Helmet>
         <div>
-            <h1 className="text-4xl font-medium">Hi</h1>
+            <h1 className="text-4xl font-medium"><i className="fas fa-box"></i> Hi</h1>
             <Brb />
             <p>ola</p>
             <p>
