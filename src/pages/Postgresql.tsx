@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/postgres.scss";
+import anime from 'animejs';
 
 const Postgresql = (props: any) => {
     const [users, setUsers] = useState<any>();
@@ -11,7 +12,20 @@ const Postgresql = (props: any) => {
                 console.log(r);
                 return r;
             })
-            .then((r) => setUsers(r));
+            .then((r) => setUsers(r))
+            .then(() => {
+                anime({
+                    targets: '.pg_user',
+                    duration: 250,
+                    keyframes: [
+                        { scale: 1.05 },
+                        { scale: 1 },
+                    ],
+                    direction: 'normal',
+                    easing: 'linear',
+                    delay: anime.stagger(50)
+                })
+            })
     }, []);
 
     return (
@@ -22,7 +36,7 @@ const Postgresql = (props: any) => {
                     target="blank"
                     rel="noreferrer"
                 >
-                    PostgreSQL
+                    <i className="fas fa-database"></i> PostgreSQL
                 </a>{" "}
                 Database
             </h1>
