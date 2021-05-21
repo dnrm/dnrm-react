@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import InputGroup from "../components/InputGroup";
 import anime from 'animejs';
 
 const Spotify = () => {
     const [data, setData] = useState<any>();
     const [song, setSong] = useState("");
+
+    useEffect(() => {
+        document.addEventListener('keypress', () => {
+            let element = document.getElementById('spotify-input');
+            element?.focus()
+        })
+
+        return document.addEventListener('keypress', () => {
+            let element = document.getElementById('spotify-input');
+            element?.focus()
+        })
+    });
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -65,6 +77,7 @@ const Spotify = () => {
                     onSubmit={handleSubmit}
                     onChange={handleChange}
                     value={song}
+                    id="spotify-input"
                 >
                     Search
                 </InputGroup>
