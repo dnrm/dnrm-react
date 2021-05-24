@@ -1,22 +1,22 @@
 .album {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    padding: 5px 0;
-    flex-direction: column;
-    text-align: center;
-    flex-wrap: wrap;
-    align-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 5px 0;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .cover {
-    height: 100%;
-    width: 100%;
-    border: 5px solid white;
+  height: 100%;
+  width: 100%;
+  border: 5px solid white;
 }
 
 .name {
-    font-size: 1.5em;
-    text-align: center;
+  font-size: 1.5em;
+  text-align: center;
 }

@@ -1,1 +1,1 @@
-declare module 'react-brb';
+declare module "react-brb";

@@ -1,52 +1,52 @@
-@import './variables';
+@import "./variables";
 
 .user {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .profile-pic {
-    width: 100px;
-    height: 100px;
-    margin-right: 25px;
-    border-radius: 50%;
-    border: 5px solid $secondary;
+  width: 100px;
+  height: 100px;
+  margin-right: 25px;
+  border-radius: 50%;
+  border: 5px solid $secondary;
 }
 
 .details {
-    color: $secondary;
-    text-decoration: none;
+  color: $secondary;
+  text-decoration: none;
 }
 
 .delete-button {
-    margin-left: auto;
-    padding: 10px;
-    background-color: $red;
-    border: none;
-    border-radius: 5px;
+  margin-left: auto;
+  padding: 10px;
+  background-color: $red;
+  border: none;
+  border-radius: 5px;
 }
 
 .delete-button svg {
-    color: white;
-    cursor: pointer;
+  color: white;
+  cursor: pointer;
 }
 
 .container {
-    color: $text;
-    max-width: 100%;
+  color: $text;
+  max-width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
-    .profile-pic {
-        border: 5px solid $text-dark;
-    }
+  .profile-pic {
+    border: 5px solid $text-dark;
+  }
 
-    .details {
-        color: $text-dark;
-    }
+  .details {
+    color: $text-dark;
+  }
 
-    .container {
-        color: $text-dark;
-    }
+  .container {
+    color: $text-dark;
+  }
 }

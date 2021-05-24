@@ -2,26 +2,25 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 interface Props {
-    image: string;
-    name: string;
+  image: string;
+  name: string;
 }
 
 export default function Album(props: Props) {
+  const [image, setImage] = useState("");
 
-    const [image, setImage] = useState('');
+  const { name } = useParams<any>();
 
-    const { name } = useParams<any>();
+  useEffect(() => {
+    fetch(`https://api.medina.dev/v1/search/${name} coldplay`)
+      .then((r) => r.json())
+      .then((r) => setImage(r[0].image));
+  });
 
-    useEffect(() => {
-        fetch(`https://api.medina.dev/v1/search/${name} coldplay`)
-            .then(r => r.json())
-            .then(r => setImage(r[0].image))
-    })
-
-    return (
-        <div>
-            <img src={image} alt="Album cover" className="w-52" />
-            <h1>{name}</h1>
-        </div>
-    );
+  return (
+    <div>
+      <img src={image} alt="Album cover" className="w-52" />
+      <h1>{name}</h1>
+    </div>
+  );
 }
