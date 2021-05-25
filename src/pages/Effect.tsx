@@ -56,7 +56,7 @@ export default function Effect() {
                   <div className="user" key={ref}>
                     <div className="image">
                       <img
-                        src={i["data"]["img"]}
+                        src={i["data"]["img"] + '?a=' + Math.random()}
                         alt={`${name}'s profile picture.`}
                         className="profile-pic"
                       />
