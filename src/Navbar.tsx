@@ -1,54 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-  useLocation,
-} from "react-router-dom";
-
-import Home from "./pages/Home";
-import Dnrm from "./pages/Dnrm";
-import AddToArray from "./pages/AddToArray";
-import StateTest from "./pages/StateTest";
-import Effect from "./pages/Effect";
-import Coldplay from "./pages/Coldplay";
-import Hidden from "./pages/Hidden";
-import Package from "./pages/Package";
-import Details from "./pages/Details";
-import Album from "./pages/Album";
-import Crypto from "./pages/Crypto";
-import Users from "./pages/Users";
-import Spotify from "./pages/Spotify";
-import Postgresql from "./pages/Postgresql";
-import Account from "./pages/Account";
-
-import SignUp from "./components/SignUp";
-import Login from "./components/Login";
-
-import styled from "styled-components";
+import Link from 'next/link';
 
 import "./styles/navbar.scss";
 
-const Container = styled.div`
-  padding: 50px;
-  color: #fff;
-`;
-
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
-
-export default function Navbar(): React.ReactElement {
-  return (
-    <Router>
-      <Nav />
-    </Router>
-  );
-}
-
-const Nav = () => {
+export default function Navbar() {
   useEffect(() => {
     document.querySelector(".navbar-toggle")!.addEventListener("click", () => {
       document.querySelector(".main-nav")!.classList.toggle("active");
@@ -63,175 +19,96 @@ const Nav = () => {
     };
   }, []);
 
-  let query = useQuery();
-
   return (
     <>
       <nav className="navbar">
         <span className="navbar-toggle" id="js-navbar-toggle">
           <i className="fas fa-bars"></i>
         </span>
-        <Link to="/" className="logo">
+        <Link href="/" className="logo">
           Home
         </Link>
         <ul className="main-nav">
+        {/* className="nav-links" */}
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/dnrm"
-              className="nav-links"
+            <Link
+              href="/dnrm"
             >
-              Dnrm
-            </NavLink>
+              <a>Dnrm</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/state-test"
-              className="nav-links"
+            <Link
+              href="/state-test"
             >
-              State Test
-            </NavLink>
+              <a>State Test</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/add-to-array"
-              className="nav-links"
+            <Link
+              href="/add-to-array"
             >
-              Add to array
-            </NavLink>
+              <a>Add to array</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/effect"
-              className="nav-links"
+            <Link
+              href="/effect"
             >
-              useEffect Test
-            </NavLink>
+              <a>useEffect Test</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/coldplay"
-              className="nav-links"
+            <Link
+              href="/coldplay"
             >
-              Coldplay
-            </NavLink>
+              <a>Coldplay</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/package"
-              className="nav-links"
+            <Link
+              href="/package"
             >
-              Package
-            </NavLink>
+              <a>Package</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/crypto"
-              className="nav-links"
+            <Link
+              href="/crypto"
             >
-              Crypto
-            </NavLink>
+              <a>Crypto</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/users"
-              className="nav-links"
+            <Link
+              href="/users"
             >
-              Users
-            </NavLink>
+              <a>Users</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/spotify"
-              className="nav-links"
+            <Link
+              href="/spotify"
             >
-              Spotify
-            </NavLink>
+              <a>Spotify</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/postgresql"
-              className="nav-links"
+            <Link
+              href="/postgresql"
             >
-              PostgreSQL
-            </NavLink>
+              <a>PostgreSQL</a>
+            </Link>
           </li>
           <li>
-            <NavLink
-              activeClassName="activeLink"
-              to="/account"
-              className="nav-links"
+            <Link
+              href="/account"
             >
-              Account
-            </NavLink>
+              <a>Account</a>
+            </Link>
           </li>
         </ul>
       </nav>
-      <Container className="main-content">
-        <Switch>
-          <Route path="/dnrm">
-            <Dnrm />
-          </Route>
-          <Route path="/add-to-array">
-            <AddToArray />
-          </Route>
-          <Route path="/state-test">
-            <StateTest message={query.get("message")} />
-          </Route>
-          <Route path="/effect">
-            <Effect />
-          </Route>
-          <Route path="/coldplay">
-            <Coldplay />
-          </Route>
-          <Route path="/details/:id">
-            <Details />
-          </Route>
-          <Route path="/hidden">
-            <Hidden />
-          </Route>
-          <Route path="/package">
-            <Package />
-          </Route>
-          <Route path="/crypto">
-            <Crypto />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/spotify">
-            <Spotify />
-          </Route>
-          <Route path="/postgresql">
-            <Postgresql />
-          </Route>
-          <Route path="/account">
-            <Account />
-          </Route>
-          <Route path="/signup">
-            <SignUp />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route
-            path="/album/:name"
-            render={(props) => <Album name="" image="" {...props} />}
-          ></Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Container>
     </>
   );
 };
