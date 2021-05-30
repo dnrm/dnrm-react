@@ -23,6 +23,7 @@ import Users from "./pages/Users";
 import Spotify from "./pages/Spotify";
 import Postgresql from "./pages/Postgresql";
 import Account from "./pages/Account";
+import Charts from './pages/Charts'
 
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
@@ -174,6 +175,15 @@ const Nav = () => {
               Account
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              activeClassName="activeLink"
+              to="/charts"
+              className="nav-links"
+            >
+              Charts
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <Container className="main-content">
@@ -222,6 +232,9 @@ const Nav = () => {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/charts">
+            <Charts />
           </Route>
           <Route
             path="/album/:name"
