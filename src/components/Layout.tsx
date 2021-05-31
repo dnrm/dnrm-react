@@ -11,10 +11,12 @@ const Container = styled.div`
 `;
 
 const Width = styled.div<any>`
+  width: 100%;
   max-width: 768px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 `;
 
 const Image = styled.img`

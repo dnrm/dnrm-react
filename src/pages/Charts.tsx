@@ -1,27 +1,23 @@
-import React, { useRef } from "react";
-import { Line } from "react-chartjs-2";
+import ChartJs from '../components/ChartJs';
+import Layout from '../components/Layout';
 
 const Charts = () => {
-    const canvasRef = useRef<any>();
-    console.log(canvasRef);
 
-    const labels = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ];
-
-    const data = {
-        labels,
+    let data = {
+        labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ],
         datasets: [
             {
                 label: "Other Things",
@@ -38,36 +34,15 @@ const Charts = () => {
                 fill: true,
             },
         ],
-    };
+    }
 
     return (
-        <Line
-            type="line"
-            data={data}
-            options={{
-                scales: {
-                    y: {
-                        max: 30,
-                        step: 1
-                    }
-                },
-                animations: {
-                    y: {
-                        easing: "easeInOutElastic",
-                        // @ts-ignore
-                        from: (ctx: any) => {
-                            if (ctx.type === "data") {
-                                if (ctx.mode === "default" && !ctx.dropped) {
-                                    ctx.dropped = true;
-                                    return 0;
-                                }
-                            }
-                        },
-                    },
-                },
-            }}
-        />
-    );
+        <Layout>
+            <h1 className="text-4xl pb-4">ChartJs</h1>
+            <hr />
+            <ChartJs data={data} />
+        </Layout>
+    )
 };
 
 export default Charts;
