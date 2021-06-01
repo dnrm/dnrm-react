@@ -1,65 +1,47 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from "react";
+import { Helmet } from "react-helmet";
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <Layout img="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+      <Helmet>
+        <title>Home | Daniel Medina</title>
+      </Helmet>
+      <section id="main">
+        <img
+          src="https://danielmedina.dev/assets/v.jpg"
+          alt="Daniel Medina"
+          className="float-left w-36 h-36 mb-px absolute top-36 ml-6 object-cover rounded-full mr-4 border-white border-4"
+        />
+        <br />
+        <br />
+        <h1 className="text-4xl py-2">Daniel Medina</h1>
+        <hr />
+        <div className="about mt-2">
+          <h3 className="text-2xl py-2 font-bold">Web Developer</h3>
+          <p>
+            I'm a web developer from Mexico. I like to work the most with
+            javascript. I am really passionate about my coding projcets. I
+            started back in January of 2020.
+          </p>
+          <p>
+            Hello, my name is Daniel Medina and I am a full stack web developer.
+            I work the most with JavaScript, primarily with Angular and NodeJs.
+            I started my career in web development on January of 2020 before the
+            coronavirus pandemic. The pandemic gave a lot of time to invest in
+            learning technologies that would allow me to create a lot of content
+            and digital media.
+          </p>
+          <p>
+            I am a web developer from Mexico. I love programming and creating
+            things. My JavaScript framework of choice is Angular. I started my
+            journey in web development in January of 2020. I started
+            learningHTML. After that I went and learned CSS and SASS. I also
+            learned JavaScript. Now I am currently working on Angular.
+          </p>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      </section>
+    </Layout>
+  );
 }
