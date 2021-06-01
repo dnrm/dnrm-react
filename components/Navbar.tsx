@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Link from 'next/link';
-import "./styles/navbar.scss";
+import "../styles/navbar.module.scss";
 
 export default function Nav() {
   useEffect(() => {
