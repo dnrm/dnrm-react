@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Navbar from './Navbar';
 
 const Container = styled.div`
   width: 100%;
@@ -28,10 +29,13 @@ const Image = styled.img`
 
 const Layout = (props: any) => {
   return (
-    <Container>
-      {props.img ? <Image src={props.img} alt="banner" /> : null}
-      <Width>{props.children}</Width>
-    </Container>
+    <>
+    <Navbar />
+      <Container>
+        {props.img ? <Image src={props.img} alt="banner" /> : null}
+        <Width>{props.children}</Width>
+      </Container>
+    </>
   );
 };
 
