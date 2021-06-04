@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import InputGroup from "../components/InputGroup";
+import Music from '../components/Music';
 import anime from "animejs";
 
 const Spotify = () => {
@@ -90,17 +91,9 @@ const Spotify = () => {
       {data && data[0] ? (
         <section
           id="results"
-          className="flex justify-center items-center flex-col"
+          className="flex justify-center items-center flex-col mt-8 lg:mt-0"
         >
-          <img
-            src={data[0].image ? data[0].image : null}
-            alt="Cover"
-            className="max-w-xs album-img"
-          />
-          <h1 className="text-3xl">{data[0].name ? data[0].name : null}</h1>
-          <h3 className="text-md">
-            {data[0].album.name ? data[0].album.name : null}
-          </h3>
+          <Music src={data[0].image ? data[0].image : null} name={data[0].name ? data[0].name : null} artist={data[0].artist ? data[0].artist : null} />
         </section>
       ) : song ? (
         <h1>not found</h1>
