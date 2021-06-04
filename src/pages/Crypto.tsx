@@ -86,7 +86,7 @@ export default function Domains() {
       <Helmet>
         <title>Crypto | Daniel Medina</title>
       </Helmet>
-      <section id="content" className=" grid-cols-1 lg:grid-cols-2 grid">
+      <section id="content" className="grid-cols-1 lg:grid-cols-2 grid">
         <section id="form">
           <h1 className="text-4xl font-light">Cryptocurrency prices</h1>
           <br />

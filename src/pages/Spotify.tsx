@@ -69,7 +69,7 @@ const Spotify = () => {
   // }
 
   return (
-    <div className="grid grid-cols-2 w-full">
+    <div className="grid-cols-1 lg:grid-cols-2 grid w-full">
       <section id="search">
         <h1 className="text-4xl">Spotify Search</h1>
         <br />
