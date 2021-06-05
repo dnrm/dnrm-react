@@ -1,5 +1,6 @@
 import ChartJs from '../components/ChartJs';
 import Layout from '../components/Layout';
+import Line from '../components/Line';
 
 const Charts = () => {
 
@@ -41,6 +42,8 @@ const Charts = () => {
             <h1 className="text-4xl pb-4">ChartJs</h1>
             <hr />
             <ChartJs data={data} />
+            <br />
+            <Line />
         </Layout>
     )
 };
