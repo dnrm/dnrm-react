@@ -1,5 +1,3 @@
-import React from "react";
-
 interface TrackProps {
     src: string,
     name: string,
@@ -8,7 +6,7 @@ interface TrackProps {
 
 const Music = (props: TrackProps) => {
     return (
-        <div className="bg-gray-700 shadow-lg rounded p-3">
+        <div className="bg-gray-800 shadow-lg rounded p-3">
             <div className="group relative">
                 <img
                     className="w-full md:w-72 block rounded"
