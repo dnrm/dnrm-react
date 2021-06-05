@@ -1,8 +1,64 @@
-import ChartJs from '../components/ChartJs';
-import Layout from '../components/Layout';
-import Line from '../components/Line';
+import ChartJs from "../components/ChartJs";
+import Layout from "../components/Layout";
+import Line from "../components/Line";
 
 const Charts = () => {
+    let line = [
+        {
+            id: "japan",
+            color: "hsl(91, 70%, 50%)",
+            data: [
+                {
+                    x: "plane",
+                    y: 262,
+                },
+                {
+                    x: "helicopter",
+                    y: 93,
+                },
+                {
+                    x: "boat",
+                    y: 232,
+                },
+                {
+                    x: "train",
+                    y: 125,
+                },
+                {
+                    x: "subway",
+                    y: 114,
+                },
+                {
+                    x: "bus",
+                    y: 37,
+                },
+                {
+                    x: "car",
+                    y: 258,
+                },
+                {
+                    x: "moto",
+                    y: 30,
+                },
+                {
+                    x: "bicycle",
+                    y: 153,
+                },
+                {
+                    x: "horse",
+                    y: 120,
+                },
+                {
+                    x: "skateboard",
+                    y: 258,
+                },
+                {
+                    x: "others",
+                    y: 93,
+                },
+            ],
+        },
+    ];
 
     let data = {
         labels: [
@@ -35,17 +91,17 @@ const Charts = () => {
                 fill: true,
             },
         ],
-    }
+    };
 
     return (
         <Layout>
             <h1 className="text-4xl pb-4">ChartJs</h1>
             <hr />
+            <Line data={line} />
             <ChartJs data={data} />
             <br />
-            <Line />
         </Layout>
-    )
+    );
 };
 
 export default Charts;
