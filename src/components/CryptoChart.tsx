@@ -48,6 +48,9 @@ const CryptoChart = (props: any) => {
                 },
             ],
         },
+        legend: {
+            display: false
+        },
     };
 
     return (

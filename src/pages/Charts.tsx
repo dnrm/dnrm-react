@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ChartJs from "../components/ChartJs";
 import Layout from "../components/Layout";
 import { Line } from "react-chartjs-2";
-import CryptoChart from '../components/CryptoChart';
+import CryptoChart from "../components/CryptoChart";
 
 const Charts = () => {
     const [prices, setPrices] = useState<any>({});
@@ -41,28 +41,14 @@ const Charts = () => {
 
     console.log(data);
 
-    const options = {
-        scales: {
-            yAxes: [
-                {
-                    type: "linear",
-                    display: true,
-                    position: "left",
-                    id: "y-axis-1",
-                },
-            ],
-        },
-    };
-
     return (
-        <Layout>
-            <h1 className="text-4xl pb-4">ChartJs</h1>
+        <>
+            <h1 className="text-8xl font-black pb-4">ChartJs</h1>
             <hr />
             {/* { prices != null ? <ChartJs data={data} /> : null} */}
             <br />
             <CryptoChart asset="bitcoin" />
-            <CryptoChart asset="ethereum" />
-        </Layout>
+        </>
     );
 };
 
