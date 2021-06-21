@@ -62,12 +62,13 @@ export default function Effect() {
                       />
                     </div>
                     <div className="text">
-                      <h1>
+                      <h1 className="text-2xl font-semibold">
                         <Link to={`/details/${ref}`} className="details">
                           {name}
                         </Link>
                       </h1>
-                      <h3>{i["data"]["birthDate"]}</h3>
+                      <h3 className="text-sm">{i["data"]["birthDate"]}</h3>
+                      <p className="text-sm">Joined { new Date((i["ts"] / 1000)).toDateString() }</p>
                     </div>
                     {isAdmin && (
                       <button
