@@ -1,7 +1,4 @@
 import { useState, useEffect } from "react";
-import ChartJs from "../components/ChartJs";
-import Layout from "../components/Layout";
-import { Line } from "react-chartjs-2";
 import CryptoChart from "../components/CryptoChart";
 
 const Charts = () => {

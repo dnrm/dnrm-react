@@ -22,7 +22,7 @@ const CryptoChart = (props: any) => {
                     data: tenDayPrices
                 })
             })
-    }, []);
+    }, [props.asset]);
 
     let data = {
         labels: prices.labels,
