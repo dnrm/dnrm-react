@@ -50,6 +50,7 @@ export default function Effect() {
             data.map((i: any) => {
               let name = i["data"]["name"] + " " + i["data"]["lastname"];
               let ref = i["ref"]["@ref"]["id"];
+              console.log(i)
 
               return (
                 <>
