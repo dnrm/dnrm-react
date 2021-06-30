@@ -1,7 +1,11 @@
 import React from "react";
 import "../styles/create.css";
 
-export default function CreateUser() {
+interface Props {
+  update: Function
+}
+
+export default function CreateUser(props: Props) {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     makeRequest(`https://medina.dev/faunadb/create-user`, {
@@ -9,6 +13,7 @@ export default function CreateUser() {
       lastname: e.target[1].value,
       birthDate: e.target[2].value,
     });
+    props.update();
   };
 
   const makeRequest = (url: string, options: Object) => {
