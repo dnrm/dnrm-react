@@ -1,5 +1,5 @@
 FROM nginx:latest AS build
-WORKDIR 80
+WORKDIR /app
 EXPOSE 80
 RUN yarn install
 RUN yarn build
