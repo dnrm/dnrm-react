@@ -4,10 +4,10 @@ EXPOSE 80
 
 COPY package.json ./
 COPY yarn.lock ./
-RUN yarn install
+RUN yarn install 
 
 COPY . .
-RUN yarn build
+RUN npm run build
 
 FROM nginx:latest
 COPY --from=build /app/build/ /usr/share/nginx/html/
