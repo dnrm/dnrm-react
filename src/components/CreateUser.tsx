@@ -6,7 +6,7 @@ interface Props {
 }
 
 export default function CreateUser(props: Props) {
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (eec2.: any) => {
     e.preventDefault();
     makeRequest(`https://medina.dev/faunadb/create-user`, {
       name: e.target[0].value,

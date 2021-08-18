@@ -22,7 +22,7 @@ const Spotify = () => {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         try {
-            fetch(`https://medina.dev/spotify/search/${song}`)
+            fetch(`https://ec2.medina.dev/spotify/search/${song}`)
                 .then((r) => {
                     if (r.ok) {
                         return r;

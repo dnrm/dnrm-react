@@ -16,13 +16,13 @@ export default function Effect() {
 
     const deleteUser = (e: any) => {
         let id = e.target.parentNode.value;
-        return fetch("https://medina.dev/faunadb/delete-user/" + id, {
+        return fetch("https://ec2.medina.dev/faunadb/delete-user/" + id, {
             method: "delete",
         }).then((response) => response.json());
     };
 
     const getUsers = () => {
-        fetch("https://medina.dev/faunadb/get-users")
+        fetch("https://ec2.medina.dev/faunadb/get-users")
             .then((data) => data.json())
             .then((items) => setData(items["data"]));
     };
