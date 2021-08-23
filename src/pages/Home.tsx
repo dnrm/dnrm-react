@@ -10,7 +10,7 @@ export default function Home() {
       </Helmet>
       <section id="main">
         <img
-          src="https://danielmedina.dev/assets/v.jpg"
+          src="https://cdn.medina.dev/dnrm.jpg"
           alt="Daniel Medina"
           className="w-36 h-36 mb-px relative -top-24 ml-6 object-cover rounded-full mr-4 border-white border-4"
         />
