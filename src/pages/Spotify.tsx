@@ -59,16 +59,6 @@ const Spotify = () => {
         setSong(e.target.value);
     };
 
-    // const animate = () => {
-    //     anime({
-    //         targets: '.album-img',
-    //         duration: 2000,
-    //         rotate: 360,
-    //         easing: 'easeInOutBack',
-    //         direction: 'normal'
-    //     })
-    // }
-
     return (
         <div className="grid-cols-1 lg:grid-cols-2 grid w-full death-star">
             <section id="search">
