@@ -69,11 +69,11 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="navbar z-50">
+      <nav className="navbar z-50 flex justify-between items-center px-4">
         <span className="navbar-toggle" id="js-navbar-toggle">
           <i className="fas fa-bars"></i>
         </span>
-        <Link to="/" className="logo">
+        <Link to="/" className="logo text-2xl text-white font-bold">
           Home
         </Link>
         <ul className="main-nav">

@@ -3,19 +3,11 @@
 .navbar {
   font-size: 18px;
   background: $secondary;
-  padding-bottom: 10px;
 }
 
 .main-nav {
   list-style-type: none;
   display: none;
-}
-
-.logo {
-  text-decoration: none;
-  color: white;
-  padding-left: 15px;
-  vertical-align: middle;
 }
 
 .nav-links {
@@ -27,12 +19,6 @@
 
 .main-nav li {
   text-align: left;
-}
-
-.logo {
-  display: inline-block;
-  font-size: 22px;
-  padding-top: 10px;
 }
 
 .navbar-toggle {
@@ -58,7 +44,6 @@
 
   .main-nav {
     display: flex;
-    margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
   }

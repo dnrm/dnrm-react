@@ -12,20 +12,20 @@ export default function Home() {
         <img
           src="https://cdn.medina.dev/dnrm.jpg"
           alt="Daniel Medina"
-          className="w-36 h-36 mb-px relative -top-24 ml-6 object-cover rounded-full mr-4 border-white border-4"
+          className="w-36 h-36 ml-6 object-cover rounded-full mr-4 border-white border-4"
         />
         <br />
         <br />
-        <h1 className="text-4xl py-2 relative -top-24">Daniel Medina</h1>
-        <hr className="relative -top-24" />
-        <div className="about mt-2 relative -top-24">
-          <h3 className="text-2xl py-2 font-bold relative -top-24">Web Developer</h3>
-          <p className="relative -top-12">
+        <h1 className="text-4xl py-2 relative">Daniel Medina</h1>
+        <hr className="relative" />
+        <div className="about mt-2 relative">
+          <h3 className="text-2xl py-2 font-bold relative">Web Developer</h3>
+          <p className="relative">
             I'm a web developer from Mexico. I like to work the most with
             javascript. I am really passionate about my coding projcets. I
             started back in January of 2020.
           </p>
-          <p className="relative -top-12">
+          <p className="relative">
             Hello, my name is Daniel Medina and I am a full stack web developer.
             I work the most with JavaScript, primarily with Angular and NodeJs.
             I started my career in web development on January of 2020 before the
@@ -33,7 +33,7 @@ export default function Home() {
             learning technologies that would allow me to create a lot of content
             and digital media.
           </p>
-          <p className="relative -top-12">
+          <p className="relative">
             I am a web developer from Mexico. I love programming and creating
             things. My JavaScript framework of choice is Angular. I started my
             journey in web development in January of 2020. I started

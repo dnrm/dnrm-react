@@ -19,17 +19,9 @@ const Width = styled.div<any>`
   flex-direction: column;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: 15vh;
-  object-fit: cover;
-  margin-bottom: 2rem;
-`;
-
 const Layout = (props: any) => {
   return (
     <Container>
-      {props.img ? <Image src={props.img} alt="banner" /> : null}
       <Width>{props.children}</Width>
     </Container>
   );
