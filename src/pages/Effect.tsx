@@ -16,13 +16,13 @@ export default function Effect() {
 
     const deleteUser = (e: any) => {
         let id = e.target.parentNode.value;
-        return fetch("https://ec2.medina.dev/faunadb/delete-user/" + id, {
+        return fetch(`https://${process.env.REACT_APP_HOSTNAME}/faunadb/delete-user/` + id, {
             method: "delete",
         }).then((response) => response.json());
     };
 
     const getUsers = () => {
-        fetch("https://ec2.medina.dev/faunadb/get-users")
+        fetch(`https://${process.env.REACT_APP_HOSTNAME}/faunadb/get-users`)
             .then((data) => data.json())
             .then((items) => setData(items["data"]));
     };
@@ -58,13 +58,9 @@ export default function Effect() {
 
                             return (
                                 <div className="user my-6" key={ref}>
-                                    <div className="image">
+                                    <div className="image bg-white">
                                         <img
-                                            src={
-                                                i["data"]["img"] +
-                                                "?a=" +
-                                                Math.random()
-                                            }
+                                            src={`https://avatars.dicebear.com/api/open-peeps/${Math.random()}.svg?clothingColor[]=%23FFFFFF&skinColor=%23FFFFFF&mood[]=happy`}
                                             alt={`${name}'s profile picture.`}
                                             className="profile-pic"
                                         />
