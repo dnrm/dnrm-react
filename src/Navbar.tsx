@@ -69,7 +69,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="navbar z-50 flex justify-between items-center px-4">
+      <nav className="navbar z-50 flex justify-between items-center px-4 border-b-2 border-gray-800">
         <span className="navbar-toggle" id="js-navbar-toggle">
           <i className="fas fa-bars"></i>
         </span>
