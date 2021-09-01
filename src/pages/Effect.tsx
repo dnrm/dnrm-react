@@ -34,7 +34,7 @@ export default function Effect() {
             <Helmet>
                 <title>useEffect | Daniel Medina</title>
             </Helmet>
-            <h1 style={{ fontSize: "3em" }} className="title">
+            <h1 style={{ fontSize: "3em" }} className="title font-space-grotesk">
                 Users
             </h1>
             <p>
@@ -60,16 +60,16 @@ export default function Effect() {
                                 <div className="user my-6" key={ref}>
                                     <div className="image bg-white">
                                         <img
-                                            src={`https://avatars.dicebear.com/api/open-peeps/${Math.random()}.svg?clothingColor[]=%23FFFFFF&skinColor=%23FFFFFF&mood[]=happy`}
+                                            src={`https://avatars.dicebear.com/api/open-peeps/${name}-dnrm.svg?clothingColor[]=%23FFFFFF&skinColor=%23FFFFFF&mood[]=happy`}
                                             alt={`${name}'s profile picture.`}
-                                            className="profile-pic"
+                                            className="w-24 h-24 mr-4 profile-pic bg-gray-300 border-white border-4 rounded-full"
                                         />
                                     </div>
                                     <div className="text">
                                         <h1 className="text-2xl font-semibold">
                                             <Link
                                                 to={`/details/${ref}`}
-                                                className="details"
+                                                className="details font-space-grotesk"
                                             >
                                                 {name}
                                             </Link>

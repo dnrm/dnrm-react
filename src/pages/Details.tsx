@@ -21,7 +21,7 @@ export default function Details() {
 
   return user ? (
     <div className="container-user">
-      <img src={data.img} alt="" className="image-user" />
+      <img src={`https://avatars.dicebear.com/api/open-peeps/${data.name + " " + data.lastname}-dnrm.svg?clothingColor[]=%23FFFFFF&skinColor=%23FFFFFF&mood[]=happy`} alt="" className="image-user" />
       <h1>
         {data.name} {data.lastname}
       </h1>

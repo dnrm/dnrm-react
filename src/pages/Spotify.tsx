@@ -62,7 +62,7 @@ const Spotify = () => {
     return (
         <div className="grid-cols-1 lg:grid-cols-2 grid w-full death-star">
             <section id="search">
-                <h1 className="text-4xl">Spotify Search</h1>
+                <h1 className="text-4xl font-space-grotesk">Spotify Search</h1>
                 <br />
                 <InputGroup
                     onSubmit={handleSubmit}

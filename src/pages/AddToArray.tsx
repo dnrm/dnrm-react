@@ -31,12 +31,11 @@ export default function AddToArray() {
   };
 
   return (
-    <Layout img="https://images.unsplash.com/photo-1581568703422-1a538f9af7c8">
-      <div>
+    <div>
         <Helmet>
           <title>Add To Array | Daniel Medina</title>
         </Helmet>
-        <h1>Add element to array</h1>
+        <h1 className="font-space-grotesk text-6xl pb-8">Add element to array</h1>
         <InputGroup value={text} onChange={handleChange} onSubmit={handleClick}>
           Send
         </InputGroup>
@@ -46,6 +45,5 @@ export default function AddToArray() {
           ))}
         </ul>
       </div>
-    </Layout>
   );
 }

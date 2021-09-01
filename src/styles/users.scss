@@ -6,17 +6,7 @@
   align-items: center;
 }
 
-.profile-pic {
-  width: 100px;
-  height: 100px;
-  margin-right: 25px;
-  border-radius: 50%;
-  border: 5px solid $secondary;
-  background-color: #fff;
-}
-
 .details {
-  color: $secondary;
   text-decoration: none;
 }
 
@@ -34,20 +24,5 @@
 }
 
 .container {
-  color: $text;
   max-width: 100%;
-}
-
-@media (prefers-color-scheme: dark) {
-  .profile-pic {
-    border: 5px solid $text-dark;
-  }
-
-  .details {
-    color: $text-dark;
-  }
-
-  .container {
-    color: $text-dark;
-  }
 }

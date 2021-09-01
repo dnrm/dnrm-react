@@ -88,7 +88,7 @@ export default function Domains() {
       </Helmet>
       <section id="content" className="grid-cols-1 lg:grid-cols-2 grid">
         <section id="form">
-          <h1 className="text-4xl font-light">Cryptocurrency prices</h1>
+          <h1 className="text-4xl font-light font-space-grotesk">Cryptocurrency prices</h1>
           <br />
           <InputGroup
             value={asset}
@@ -120,16 +120,16 @@ export default function Domains() {
                     />
                   </div>
                   <div className="text">
-                    <h1 className="text-6xl">
-                      <span>{data.symbol}</span> {data.name}
+                    <h1 className="text-6xl font-space-grotesk">
+                      <span className="font-space-grotesk">{data.symbol}</span> {data.name}
                     </h1>
-                    <h2 className="text-2xl">
+                    <h2 className="text-2xl font-space-grotesk">
                       {parseFloat(data.priceUsd).toFixed(5)} (USD)
                     </h2>
                   </div>
                 </>
               ) : (
-                <div className="mt-2 flex justify-center items-center">
+                <div className="mt-2 flex justify-center items-center font-space-grotesk">
                   <i className="fas fa-ban text-5xl pr-4"></i>
                   <h1 className="text-5xl">Coin not found</h1>
                 </div>

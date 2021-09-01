@@ -9,20 +9,17 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Dnrm from "./pages/Dnrm";
 import AddToArray from "./pages/AddToArray";
 import StateTest from "./pages/StateTest";
 import Effect from "./pages/Effect";
 import Coldplay from "./pages/Coldplay";
 import Hidden from "./pages/Hidden";
-import Package from "./pages/Package";
 import Details from "./pages/Details";
 import Album from "./pages/Album";
 import Crypto from "./pages/Crypto";
 import Users from "./pages/Users";
 import Spotify from "./pages/Spotify";
 import Postgresql from "./pages/Postgresql";
-import Account from "./pages/Account";
 import Charts from './pages/Charts'
 import Ily from './pages/Ily';
 
@@ -35,7 +32,6 @@ import "./styles/navbar.scss";
 
 const Container = styled.div`
   padding: 50px;
-  color: #fff;
 `;
 
 function useQuery() {
@@ -69,129 +65,99 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="navbar z-50 flex justify-between items-center px-4">
+      <nav className="navbar z-50 flex justify-between items-center px-3 bg-gray">
+        <Link to="/" className="logo text-2xl text-white font-space-grotesk">
+          Home
+        </Link>
         <span className="navbar-toggle" id="js-navbar-toggle">
           <i className="fas fa-bars"></i>
         </span>
-        <Link to="/" className="logo text-2xl text-white font-bold">
-          Home
-        </Link>
         <ul className="main-nav">
           <li>
             <NavLink
-              activeClassName="activeLink"
-              to="/dnrm"
-              className="nav-links"
-            >
-              Dnrm
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/state-test"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               State Test
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/add-to-array"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               Add to array
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/effect"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               useEffect Test
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/coldplay"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               Coldplay
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
-              to="/package"
-              className="nav-links"
-            >
-              Package
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/crypto"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               Crypto
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/users"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               Users
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/spotify"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               Spotify
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/postgresql"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               PostgreSQL
             </NavLink>
           </li>
           <li>
             <NavLink
-              activeClassName="activeLink"
-              to="/account"
-              className="nav-links"
-            >
-              Account
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="activeLink"
+              activeClassName="bg-accent"
               to="/charts"
-              className="nav-links"
+              className="py-4 block px-3 font-space-grotesk"
             >
               Charts
             </NavLink>
           </li>
         </ul>
       </nav>
-      <Container className="main-content">
+      <Container className="main-content text-white">
         <Switch>
-          <Route path="/dnrm">
-            <Dnrm />
-          </Route>
           <Route path="/add-to-array">
             <AddToArray />
           </Route>
@@ -213,9 +179,6 @@ const Nav = () => {
           <Route path="/ily">
             <Ily />
           </Route>
-          <Route path="/package">
-            <Package />
-          </Route>
           <Route path="/crypto">
             <Crypto />
           </Route>
@@ -227,9 +190,6 @@ const Nav = () => {
           </Route>
           <Route path="/postgresql">
             <Postgresql />
-          </Route>
-          <Route path="/account">
-            <Account />
           </Route>
           <Route path="/signup">
             <SignUp />

@@ -70,7 +70,7 @@ export default function Coldplay() {
       <Helmet>
         <title>Coldplay | Daniel Medina</title>
       </Helmet>
-      <Title>Coldplay</Title>
+      <Title className="font-space-grotesk">Coldplay</Title>
       <hr />
       <Subtitle>Albums</Subtitle>
       <div id="albums-list">

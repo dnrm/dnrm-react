@@ -32,32 +32,25 @@ export default function StateTest(props: any) {
   // img="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
 
   return (
-    <Layout img="https://images.unsplash.com/photo-1542318099375-c20b8c991bbe">
-      <div className="flex justify-center items-center flex-col">
-        <Helmet>
-          <title>State Test | Daniel Medina</title>
-        </Helmet>
-        <h1 className="text-4xl">State Test</h1>
-        <p>Your mesage: {message ? message : "Nothing"}</p>
-        <br />
-        <StyledDiv
-          onSubmit={(e) => {
-            e.preventDefault();
-            submit(e);
-          }}
-          style={{ maxWidth: "768px" }}
-        >
-          <Input
-            type="text"
-            onChange={handleChange}
-            value={message}
-            inputGroup
-          />
-          <Button type="submit" inputGroup>
-            Submit
-          </Button>
-        </StyledDiv>
-      </div>
-    </Layout>
+    <div>
+      <Helmet>
+        <title>State Test | Daniel Medina</title>
+      </Helmet>
+      <h1 className="text-6xl font-space-grotesk">State Test</h1>
+      <p className="font-space-grotesk">Your mesage: {message ? message : "Nothing"}</p>
+      <br />
+      <StyledDiv
+        onSubmit={(e) => {
+          e.preventDefault();
+          submit(e);
+        }}
+        style={{ maxWidth: "768px" }}
+      >
+        <Input type="text" onChange={handleChange} value={message} inputGroup />
+        <Button type="submit" inputGroup>
+          Submit
+        </Button>
+      </StyledDiv>
+    </div>
   );
 }

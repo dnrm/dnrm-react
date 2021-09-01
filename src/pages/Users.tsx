@@ -8,7 +8,7 @@ const Users = (props: any) => {
         <title>Users | Daniel Medina</title>
       </Helmet>
       <header className="heading text-4xl font-bold pb-8">
-        <h1 className="pb-4">Users</h1>
+        <h1 className="pb-4 font-space-grotesk">Users</h1>
         <hr />
       </header>
       <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-4">

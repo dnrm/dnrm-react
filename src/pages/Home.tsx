@@ -9,36 +9,14 @@ export default function Home() {
         <title>Home | Daniel Medina</title>
       </Helmet>
       <section id="main">
-        <img
-          src="https://cdn.medina.dev/dnrm.jpg"
-          alt="Daniel Medina"
-          className="w-36 h-36 ml-6 object-cover rounded-full mr-4 border-white border-4"
-        />
-        <br />
-        <br />
-        <h1 className="text-4xl py-2 relative">Daniel Medina</h1>
+        <h1 className="text-4xl py-2 relative font-space-grotesk">Daniel Medina</h1>
         <hr className="relative" />
         <div className="about mt-2 relative">
-          <h3 className="text-2xl py-2 font-bold relative">Web Developer</h3>
           <p className="relative">
-            I'm a web developer from Mexico. I like to work the most with
-            javascript. I am really passionate about my coding projcets. I
-            started back in January of 2020.
+            My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. I started my journey as a web developer in January of 2020. During the COVID-19 pandemic I had a lot of free time therefore I was able to really bump up my skills. I started experimenting with all kinds of technologies and projects. As of August 2021 I have made 6 big projects which are listed below. I have also done some small projects which can be found in my Github a profile.
           </p>
           <p className="relative">
-            Hello, my name is Daniel Medina and I am a full stack web developer.
-            I work the most with JavaScript, primarily with Angular and NodeJs.
-            I started my career in web development on January of 2020 before the
-            coronavirus pandemic. The pandemic gave a lot of time to invest in
-            learning technologies that would allow me to create a lot of content
-            and digital media.
-          </p>
-          <p className="relative">
-            I am a web developer from Mexico. I love programming and creating
-            things. My JavaScript framework of choice is Angular. I started my
-            journey in web development in January of 2020. I started
-            learningHTML. After that I went and learned CSS and SASS. I also
-            learned JavaScript. Now I am currently working on Angular.
+          I spend my free time listening and composing music, taking photos, sailing, and coding. I also love collecting vinyl records. I currently have a small collection of them, but plan to expand it indefinitely. Check out my collection here.
           </p>
         </div>
       </section>

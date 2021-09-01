@@ -40,7 +40,7 @@ const Charts = () => {
 
     return (
         <>
-            <h1 className="text-8xl font-black pb-4">ChartJs</h1>
+            <h1 className="text-8xl pb-4 font-space-grotesk">ChartJs</h1>
             <hr />
             {/* { prices != null ? <ChartJs data={data} /> : null} */}
             <br />

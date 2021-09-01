@@ -27,9 +27,9 @@ const Postgresql = (props: any) => {
 
   return (
     <div>
-      <h1 className="text-4xl font-light pb-4">
+      <h1 className="text-4xl font-light pb-4 font-space-grotesk">
         <a href="https://www.postgresql.org/" target="blank" rel="noreferrer">
-          <i className="fas fa-database"></i> PostgreSQL
+          <i className="fas fa-database"></i> <span className="font-space-grotesk">PostgreSQL</span>
         </a>{" "}
         Database
       </h1>

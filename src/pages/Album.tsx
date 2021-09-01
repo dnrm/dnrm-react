@@ -20,7 +20,7 @@ export default function Album(props: Props) {
   return (
     <div>
       <img src={image} alt="Album cover" className="w-52" />
-      <h1>{name}</h1>
+      <h1 className="font-space-grotesk">{name}</h1>
     </div>
   );
 }

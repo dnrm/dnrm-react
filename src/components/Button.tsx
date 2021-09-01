@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/rainbow.scss";
 import styled from "styled-components";
 
 const StyledButton = styled.button<any>`
@@ -10,7 +9,7 @@ const StyledButton = styled.button<any>`
 export default function Button(props: any) {
   return (
     <>
-      <StyledButton className="button rainbow-btn" {...props}>
+      <StyledButton className="button bg-accent text-xl  font-space-grotesk p-2 px-4" {...props}>
         {props.children}
       </StyledButton>
     </>
