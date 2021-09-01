@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import useIsAdmin from "../hooks/useIsAdmin";
 import CreateUser from "../components/CreateUser";
+import Layout from "../components/Layout";
 
 import "../styles/users.scss";
 
@@ -30,7 +31,7 @@ export default function Effect() {
     const isAdmin = useIsAdmin();
 
     return (
-        <div className="container">
+        <Layout className="container">
             <Helmet>
                 <title>useEffect | Daniel Medina</title>
             </Helmet>
@@ -115,6 +116,6 @@ export default function Effect() {
                 <h1>Loading...</h1>
             )}
             {isAdmin && <CreateUser update={getUsers} />}
-        </div>
+        </Layout>
     );
 }

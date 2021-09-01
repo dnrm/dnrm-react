@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Helmet } from "react-helmet";
 import Album from "../components/Album";
+import Layout from "../components/Layout";
 
 import "../styles/hr.css";
 import "../styles/albums.scss";
@@ -66,7 +67,7 @@ export default function Coldplay() {
   ];
 
   return (
-    <>
+    <Layout>
       <Helmet>
         <title>Coldplay | Daniel Medina</title>
       </Helmet>
@@ -83,6 +84,6 @@ export default function Coldplay() {
         })}
       </div>
       <br />
-    </>
+    </Layout>
   );
 }

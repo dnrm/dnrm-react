@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import InputGroup from "../components/InputGroup";
 import anime from "animejs";
 import Icons from "../components/Icons";
+import Layout from "../components/Layout";
 
 export default function Domains() {
   const [asset, setAsset] = useState("");
@@ -82,7 +83,7 @@ export default function Domains() {
   };
 
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>Crypto | Daniel Medina</title>
       </Helmet>
@@ -137,6 +138,6 @@ export default function Domains() {
           </section>
         </section>
       </section>
-    </div>
+    </Layout>
   );
 }

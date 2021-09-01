@@ -32,7 +32,7 @@ export default function StateTest(props: any) {
   // img="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
 
   return (
-    <div>
+    <Layout>
       <Helmet>
         <title>State Test | Daniel Medina</title>
       </Helmet>
@@ -51,6 +51,6 @@ export default function StateTest(props: any) {
           Submit
         </Button>
       </StyledDiv>
-    </div>
+    </Layout>
   );
 }

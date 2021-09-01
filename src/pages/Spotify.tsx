@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import InputGroup from "../components/InputGroup";
 import Music from "../components/Music";
 import anime from "animejs";
+import Layout from '../components/Layout'
 
 const Spotify = () => {
     const [data, setData] = useState<any>();
@@ -60,41 +61,43 @@ const Spotify = () => {
     };
 
     return (
-        <div className="grid-cols-1 lg:grid-cols-2 grid w-full death-star">
-            <section id="search">
-                <h1 className="text-4xl font-space-grotesk">Spotify Search</h1>
-                <br />
-                <InputGroup
-                    onSubmit={handleSubmit}
-                    onChange={handleChange}
-                    value={song}
-                    id="spotify-input"
-                >
-                    Search
-                </InputGroup>
-                <br />
-                <p>
-                    Search for your favourite songs! Use the Spotify API to
-                    search songs and view their album cover. No login required.
-                </p>
-            </section>
-            {data && data[0] ? (
-                <section
-                    id="results"
-                    className="flex justify-center items-center flex-col mt-8 lg:mt-0"
-                >
-                    <Music
-                        src={data[0].image ? data[0].image : null}
-                        name={data[0].name ? data[0].name : null}
-                        artist={data[0].artist ? data[0].artist : null}
-                        url={data[0].song_url ? data[0].song_url : null}
-                        preview={data[0].preview_url ? data[0].preview_url : null}
-                    />
+        <Layout>
+            <div className="grid-cols-1 xl:grid-cols-2 grid gap-4 p-0">
+                <section id="search">
+                    <h1 className="text-4xl font-space-grotesk">Spotify Search</h1>
+                    <br />
+                    <InputGroup
+                        onSubmit={handleSubmit}
+                        onChange={handleChange}
+                        value={song}
+                        id="spotify-input"
+                    >
+                        Search
+                    </InputGroup>
+                    <br />
+                    <p>
+                        Search for your favourite songs! Use the Spotify API to
+                        search songs and view their album cover. No login required.
+                    </p>
                 </section>
-            ) : song ? (
-                <h1>not found</h1>
-            ) : null}
-        </div>
+                {data && data[0] ? (
+                    <section
+                        id="results"
+                        className="flex justify-center items-center flex-col mt-8 lg:mt-0"
+                    >
+                        <Music
+                            src={data[0].image ? data[0].image : null}
+                            name={data[0].name ? data[0].name : null}
+                            artist={data[0].artist ? data[0].artist : null}
+                            url={data[0].song_url ? data[0].song_url : null}
+                            preview={data[0].preview_url ? data[0].preview_url : null}
+                        />
+                    </section>
+                ) : song ? (
+                    <h1>not found</h1>
+                ) : null}
+            </div>
+        </Layout>
     );
 };
 

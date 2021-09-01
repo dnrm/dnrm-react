@@ -19,8 +19,8 @@ import Album from "./pages/Album";
 import Crypto from "./pages/Crypto";
 import Spotify from "./pages/Spotify";
 import Postgresql from "./pages/Postgresql";
-import Charts from './pages/Charts'
-import Ily from './pages/Ily';
+import Charts from "./pages/Charts";
+import Ily from "./pages/Ily";
 
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
@@ -28,10 +28,6 @@ import Login from "./components/Login";
 import styled from "styled-components";
 
 import "./styles/navbar.scss";
-
-const Container = styled.div`
-  padding: 50px;
-`;
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -64,89 +60,95 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="navbar z-50 flex justify-between items-center px-3 bg-gray">
-        <Link to="/" className="logo text-2xl text-white font-space-grotesk">
-          Home
-        </Link>
-        <span className="navbar-toggle" id="js-navbar-toggle">
-          <i className="fas fa-bars"></i>
-        </span>
-        <ul className="main-nav">
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/state-test"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              State Test
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/add-to-array"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              Add to array
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/effect"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              useEffect Test
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/coldplay"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              Coldplay
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/crypto"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              Crypto
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/spotify"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              Spotify
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/postgresql"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              PostgreSQL
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
-              to="/charts"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              Charts
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-      <Container className="main-content text-white">
+      <div className="py-8 flex justify-center">
+        <nav className="navbar z-50 flex justify-between items-center w-full bg-none px-5 md:px-20 lg:px-36">
+          <Link
+            to="/"
+            className="logo text-2xl text-white font-space-grotesk"
+          >
+            Home
+          </Link>
+          <span className="navbar-toggle" id="js-navbar-toggle">
+            <i className="fas fa-bars"></i>
+          </span>
+          <ul className="main-nav">
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/state-test"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                State Test
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/add-to-array"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                Add to array
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/effect"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                useEffect Test
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/coldplay"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                Coldplay
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/crypto"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                Crypto
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/spotify"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                Spotify
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/postgresql"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                PostgreSQL
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                activeClassName="bg-accent"
+                to="/charts"
+                className="py-2 block px-2 font-space-grotesk text-sm"
+              >
+                Charts
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div></div>
+      <section className="main-content text-white py-12">
         <Switch>
           <Route path="/add-to-array">
             <AddToArray />
@@ -195,7 +197,7 @@ const Nav = () => {
             <Home />
           </Route>
         </Switch>
-      </Container>
+      </section>
     </>
   );
 };

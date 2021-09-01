@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles/postgres.scss";
 import anime from "animejs";
+import Layout from "../components/Layout";
 
 const Postgresql = (props: any) => {
   const [users, setUsers] = useState<any>();
@@ -26,7 +27,7 @@ const Postgresql = (props: any) => {
   }, []);
 
   return (
-    <div>
+    <Layout>
       <h1 className="text-4xl font-light pb-4 font-space-grotesk">
         <a href="https://www.postgresql.org/" target="blank" rel="noreferrer">
           <i className="fas fa-database"></i> <span className="font-space-grotesk">PostgreSQL</span>
@@ -55,7 +56,7 @@ const Postgresql = (props: any) => {
             })
           : null}
       </div>
-    </div>
+    </Layout>
   );
 };
 

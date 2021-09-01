@@ -31,19 +31,19 @@ export default function AddToArray() {
   };
 
   return (
-    <div>
-        <Helmet>
-          <title>Add To Array | Daniel Medina</title>
-        </Helmet>
-        <h1 className="font-space-grotesk text-6xl pb-8">Add element to array</h1>
-        <InputGroup value={text} onChange={handleChange} onSubmit={handleClick}>
-          Send
-        </InputGroup>
-        <ul>
-          {messages.map((i, index) => (
-            <Item>{i}</Item>
-          ))}
-        </ul>
-      </div>
+    <Layout>
+      <Helmet>
+        <title>Add To Array | Daniel Medina</title>
+      </Helmet>
+      <h1 className="font-space-grotesk text-6xl pb-8">Add element to array</h1>
+      <InputGroup value={text} onChange={handleChange} onSubmit={handleClick}>
+        Send
+      </InputGroup>
+      <ul>
+        {messages.map((i, index) => (
+          <Item>{i}</Item>
+        ))}
+      </ul>
+    </Layout>
   );
 }
