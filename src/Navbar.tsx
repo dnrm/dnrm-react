@@ -120,15 +120,6 @@ const Nav = () => {
           <li>
             <NavLink
               activeClassName="bg-accent"
-              to="/users"
-              className="py-4 block px-3 font-space-grotesk"
-            >
-              Users
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              activeClassName="bg-accent"
               to="/spotify"
               className="py-4 block px-3 font-space-grotesk"
             >
