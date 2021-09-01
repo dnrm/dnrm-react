@@ -17,7 +17,6 @@ import Hidden from "./pages/Hidden";
 import Details from "./pages/Details";
 import Album from "./pages/Album";
 import Crypto from "./pages/Crypto";
-import Users from "./pages/Users";
 import Spotify from "./pages/Spotify";
 import Postgresql from "./pages/Postgresql";
 import Charts from './pages/Charts'
@@ -181,9 +180,6 @@ const Nav = () => {
           </Route>
           <Route path="/crypto">
             <Crypto />
-          </Route>
-          <Route path="/users">
-            <Users />
           </Route>
           <Route path="/spotify">
             <Spotify />
