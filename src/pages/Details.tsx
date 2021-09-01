@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-import "../styles/details.css";
+import Layout from "../components/Layout";
 
 export default function Details() {
   let { id } = useParams<any>();
@@ -19,15 +18,23 @@ export default function Details() {
 
   let data = user["data"];
 
-  return user ? (
-    <div className="container-user">
-      <img src={`https://avatars.dicebear.com/api/open-peeps/${data.name + " " + data.lastname}-dnrm.svg?clothingColor[]=%23FFFFFF&skinColor=%23FFFFFF&mood[]=happy`} alt="" className="image-user" />
-      <h1>
-        {data.name} {data.lastname}
-      </h1>
-      <h3>{data.birthDate}</h3>
-    </div>
-  ) : (
-    <h1>Loading</h1>
+  return (
+    <Layout>
+      {user ? (
+        <div className="grid place-items-center">
+          <img
+            src={`https://avatars.dicebear.com/api/open-peeps/${
+              data.name + " " + data.lastname
+            }-dnrm.svg?clothingColor[]=%23FFFFFF&skinColor=%23FFFFFF&mood[]=happy`}
+            alt=""
+            className="h-64 w-64 object-cover rounded-full border-8 border-white"
+          />
+          <h1 className="mt-2 font-space-grotesk text-4xl">
+            {data.name} {data.lastname}
+          </h1>
+          <h3>{data.birthDate}</h3>
+        </div>
+      ) : null}
+    </Layout>
   );
 }

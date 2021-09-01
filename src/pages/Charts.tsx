@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import CryptoChart from "../components/CryptoChart";
+import Layout from "../components/Layout";
 
 const Charts = () => {
     const [prices, setPrices] = useState<any>({});
@@ -39,13 +40,13 @@ const Charts = () => {
     console.log(data);
 
     return (
-        <>
+        <Layout>
             <h1 className="text-8xl pb-4 font-space-grotesk">ChartJs</h1>
             <hr />
             {/* { prices != null ? <ChartJs data={data} /> : null} */}
             <br />
             <CryptoChart asset="bitcoin" />
-        </>
+        </Layout>
     );
 };
 
