@@ -61,7 +61,7 @@ const Nav = () => {
   return (
     <>
       <div className="py-8 flex justify-center">
-        <nav className="navbar z-50 flex justify-between items-center w-full bg-none px-5 md:px-20 lg:px-36">
+        <nav className="navbar z-50 flex justify-between items-center w-full bg-none px-5 md:px-20 lg:px-64">
           <Link
             to="/"
             className="logo text-2xl text-white font-space-grotesk"
