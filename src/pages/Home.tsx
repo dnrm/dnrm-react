@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="text-4xl py-2 relative font-space-grotesk">Daniel Medina</h1>
         <hr className="relative" />
         <div className="about mt-2 relative">
-          <p className="relative">
+          <p className="relative font-sans">
             My name is Daniel Medina. I am a high school student at Tecnológico de Monterrey. I started my journey as a web developer in January of 2020. During the COVID-19 pandemic I had a lot of free time therefore I was able to really bump up my skills. I started experimenting with all kinds of technologies and projects. As of August 2021 I have made 6 big projects which are listed below. I have also done some small projects which can be found in my Github a profile.
           </p>
           <p className="relative">

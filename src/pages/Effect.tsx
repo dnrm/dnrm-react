@@ -59,11 +59,11 @@ export default function Effect() {
 
                             return (
                                 <div className="user my-6" key={ref}>
-                                    <div className="image bg-white">
+                                    <div className="image">
                                         <img
                                             src={`https://avatars.dicebear.com/api/open-peeps/${name}-dnrm.svg?clothingColor[]=%23FFFFFF&skinColor=%23FFFFFF&mood[]=happy`}
                                             alt={`${name}'s profile picture.`}
-                                            className="w-24 h-24 mr-4 profile-pic bg-gray-300 border-white border-4 rounded-full"
+                                            className="w-24 h-24 mr-4 profile-pic bg-gray-400 border-white border-4 rounded-full"
                                         />
                                     </div>
                                     <div className="text">
