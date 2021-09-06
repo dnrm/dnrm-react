@@ -7,7 +7,7 @@ const Postgresql = (props: any) => {
   const [users, setUsers] = useState<any>();
 
   useEffect(() => {
-    fetch(`https://${process.env.REACT_APP_HOSTNAME}/postgresql/users`)
+    fetch(`https://${process.env.REACT_APP_HOSTNAME}/postgres/users`)
       .then((r) => r.json())
       .then((r) => {
         console.log(r);
