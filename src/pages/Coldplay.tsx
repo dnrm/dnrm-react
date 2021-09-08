@@ -26,48 +26,41 @@ export default function Coldplay() {
   let albums: Array<AlbumType> = [
     {
       image:
-        "https://i.pinimg.com/originals/5b/c5/22/5bc522cf1e82f5299a738f9c324e9c59.jpg",
+        "https://i.scdn.co/image/ab67616d0000b2733d92b2ad5af9fbc8637425f0",
       name: "Parachutes",
     },
     {
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/71nadF3Iw2L._SL1300_.jpg",
+      image: "https://i.scdn.co/image/ab67616d0000b27390afd8e4ec6d787114ed6c40",
       name: "A Rush of Blood to the Head",
     },
     {
-      image:
-        "https://i.pinimg.com/originals/c7/4f/62/c74f621b2a9423ee96bdd8fb4560fe03.jpg",
+      image: "https://i.scdn.co/image/ab67616d0000b2734e0362c225863f6ae2432651",
       name: "X&Y",
     },
     {
-      image:
-        "https://upload.wikimedia.org/wikipedia/en/thumb/2/25/Viva_la_Vida_or_Death_and_All_His_Friends.jpg/220px-Viva_la_Vida_or_Death_and_All_His_Friends.jpg",
+      image: "https://i.scdn.co/image/ab67616d0000b273e21cc1db05580b6f2d2a3b6e",
       name: "Viva La Vida",
     },
     {
-      image:
-        "https://img.discogs.com/KCBXJ-MOiYMgCW4rAM6oqT1k3Dc=/fit-in/600x591/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4086891-1354795426-6451.jpeg.jpg",
+      image: "https://i.scdn.co/image/ab67616d0000b273de0cd11d7b31c3bd1fd5983d",
       name: "Mylo Xyloto",
     },
     {
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/81CFQ5cyltL._AC_SL1500_.jpg",
+      image: "https://i.scdn.co/image/ab67616d0000b273f864bcdcc245f06831d17ae0",
       name: "Ghost Stories",
     },
     {
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/A1p7bWyAvmL._AC_SL1500_.jpg",
+      image: "https://i.scdn.co/image/ab67616d0000b2738ff7c3580d429c8212b9a3b6",
       name: "A Head Full of Dreams",
     },
     {
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/A1iKwR302xL._SX522_.jpg",
+      image: "https://i.scdn.co/image/ab67616d0000b273733913465adb99353020b805",
       name: "Everyday Life",
     },
     {
-      image: 'https://i.scdn.co/image/ab67616d0000b2738e6e01a0deaa183a6c3d92a4',
-      name: 'Music of the Spheres'
-    }
+      image: "https://i.scdn.co/image/ab67616d0000b2738e6e01a0deaa183a6c3d92a4",
+      name: "Music of the Spheres",
+    },
   ];
 
   return (
