@@ -64,6 +64,10 @@ export default function Coldplay() {
         "https://images-na.ssl-images-amazon.com/images/I/A1iKwR302xL._SX522_.jpg",
       name: "Everyday Life",
     },
+    {
+      image: 'https://i.scdn.co/image/ab67616d0000b2738e6e01a0deaa183a6c3d92a4',
+      name: 'Music of the Spheres'
+    }
   ];
 
   return (
