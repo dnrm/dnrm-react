@@ -18,7 +18,7 @@ export default function Album(props: Props) {
   });
 
   return (
-    <div>
+    <div className="px-5 md:px-20 lg:px-64">
       <img src={image} alt="Album cover" className="w-52" />
       <h1 className="font-space-grotesk">{name}</h1>
     </div>
