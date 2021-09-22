@@ -25,8 +25,6 @@ import Ily from "./pages/Ily";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 
-import styled from "styled-components";
-
 import "./styles/navbar.scss";
 
 function useQuery() {
