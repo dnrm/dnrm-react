@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -40,37 +40,39 @@ export default function Navbar(): React.ReactElement {
 }
 
 const Nav = () => {
-  useEffect(() => {
-    document.querySelector(".navbar-toggle")!.addEventListener("click", () => {
-      document.querySelector(".main-nav")!.classList.toggle("active");
-    })!;
+  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
 
-    return () => {
-      document
-        .querySelector(".navbar-toggle")!
-        .removeEventListener("click", () => {
-          document.querySelector(".main-nav")!.classList.toggle("active");
-        });
-    };
-  }, []);
+  const toggleNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  };
 
   let query = useQuery();
 
   return (
     <>
       <div className="py-8 flex justify-center">
-        <nav className="navbar z-50 flex justify-between items-center w-full bg-none px-5 md:px-20 lg:px-64">
-          <Link
-            to="/"
-            className="logo text-2xl text-white font-space-grotesk"
-          >
-            Home
-          </Link>
-          <span className="navbar-toggle" id="js-navbar-toggle">
-            <i className="fas fa-bars"></i>
-          </span>
-          <ul className="main-nav">
-            <li>
+        <nav
+          className={`navbar z-50 flex ${
+            navbarOpen ? "flex-col" : null
+          } justify-between items-start w-full bg-none px-5 md:px-20 lg:px-64`}
+        >
+          <div className="flex flex-row justify-between items-center w-full mb-2">
+            <Link
+              to="/"
+              className="logo text-2xl text-white font-space-grotesk"
+            >
+              Home
+            </Link>
+            <span
+              onClick={toggleNavbar}
+              className={`navbar-toggle`}
+              id="js-navbar-toggle"
+            >
+              <i className="fas fa-bars"></i>
+            </span>
+          </div>
+          <ul className={`main-nav ${navbarOpen ? "block" : "hidden"} w-full md:flex-row justify-center items-center flex-col`}>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/state-test"
@@ -79,7 +81,7 @@ const Nav = () => {
                 State Test
               </NavLink>
             </li>
-            <li>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/add-to-array"
@@ -88,7 +90,7 @@ const Nav = () => {
                 Add to array
               </NavLink>
             </li>
-            <li>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/effect"
@@ -97,7 +99,7 @@ const Nav = () => {
                 useEffect Test
               </NavLink>
             </li>
-            <li>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/coldplay"
@@ -106,7 +108,7 @@ const Nav = () => {
                 Coldplay
               </NavLink>
             </li>
-            <li>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/crypto"
@@ -115,7 +117,7 @@ const Nav = () => {
                 Crypto
               </NavLink>
             </li>
-            <li>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/spotify"
@@ -124,7 +126,7 @@ const Nav = () => {
                 Spotify
               </NavLink>
             </li>
-            <li>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/postgresql"
@@ -133,7 +135,7 @@ const Nav = () => {
                 PostgreSQL
               </NavLink>
             </li>
-            <li>
+            <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
                 to="/charts"
