@@ -9,7 +9,7 @@ export default function Details() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://${process.env.REACT_APP_HOSTNAME}/faunadb/get-user/${id}`
+        `https://${process.env.REACT_APP_HOSTNAME}/get-user/${id}`
       ).then(async (response) => await response.json());
       setUser(data["response"]);
     };
