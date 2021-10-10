@@ -8,7 +8,7 @@ interface Props {
 export default function CreateUser(props: Props) {
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    makeRequest(`https://${process.env.REACT_APP_HOSTNAME}/faunadb/create-user`, {
+    makeRequest(`https://${process.env.REACT_APP_HOSTNAME}/create-user`, {
       name: e.target[0].value,
       lastname: e.target[1].value,
       birthDate: e.target[2].value,

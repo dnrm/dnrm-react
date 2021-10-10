@@ -17,13 +17,13 @@ export default function Effect() {
 
     const deleteUser = (e: any) => {
         let id = e.target.parentNode.value;
-        return fetch(`https://${process.env.REACT_APP_HOSTNAME}/faunadb/delete-user/` + id, {
+        return fetch(`https://${process.env.REACT_APP_HOSTNAME}/delete-user/` + id, {
             method: "delete",
         }).then((response) => response.json());
     };
 
     const getUsers = () => {
-        fetch(`https://${process.env.REACT_APP_HOSTNAME}/faunadb/get-users`)
+        fetch(`https://${process.env.REACT_APP_HOSTNAME}/get-users`)
             .then((data) => data.json())
             .then((items) => setData(items["data"]));
     };

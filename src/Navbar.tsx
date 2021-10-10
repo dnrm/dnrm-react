@@ -71,7 +71,12 @@ const Nav = () => {
               <i className="fas fa-bars"></i>
             </span>
           </div>
-          <ul className={`main-nav ${navbarOpen ? "block" : "hidden"} w-full md:flex-row justify-center items-center flex-col`}>
+          <ul
+            className={`main-nav ${
+              navbarOpen ? "block" : "hidden"
+            } w-full md:flex-row justify-center items-center flex-col`}
+            onClick={toggleNavbar}
+          >
             <li className="hover:bg-gray-600 w-full block">
               <NavLink
                 activeClassName="bg-accent"
