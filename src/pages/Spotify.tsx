@@ -23,7 +23,7 @@ const Spotify = () => {
     const handleSubmit = (e: any) => {
         e.preventDefault();
         try {
-            fetch(`https://${process.env.REACT_APP_HOSTNAME}/spotify/search/${song}`)
+            fetch(`https://${process.env.REACT_APP_SPOTIFY}/search/${song}`)
                 .then((r) => {
                     if (r.ok) {
                         return r;

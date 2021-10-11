@@ -12,7 +12,7 @@ export default function Album(props: Props) {
   const { name } = useParams<any>();
 
   useEffect(() => {
-    fetch(`https://api.medina.dev/v1/search/${name} coldplay`)
+    fetch(`https://${process.env.REACT_APP_SPOTIFY}/search/${name} coldplay`)
       .then((r) => r.json())
       .then((r) => setImage(r[0].image));
   });
