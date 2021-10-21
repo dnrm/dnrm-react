@@ -58,7 +58,7 @@ export default function Coldplay() {
       name: "Everyday Life",
     },
     {
-      image: "https://i.scdn.co/image/ab67616d0000b2738e6e01a0deaa183a6c3d92a4",
+      image: "https://i.scdn.co/image/ab67616d0000b273ec10f247b100da1ce0d80b6d",
       name: "Music of the Spheres",
     },
   ];
