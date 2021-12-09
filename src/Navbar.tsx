@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,6 +7,7 @@ import {
   NavLink,
   useLocation,
 } from "react-router-dom";
+import anime from 'animejs'
 
 import Home from "./pages/Home";
 import AddToArray from "./pages/AddToArray";
@@ -41,8 +42,30 @@ export default function Navbar(): React.ReactElement {
 
 const Nav = () => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+  const navbarRef = useRef(null)
 
   const toggleNavbar = () => {
+    if (navbarOpen) {
+      anime({
+        targets: '.main-nav',
+        duration: 500,
+        opacity: 0,
+        complete: function() {
+          // @ts-ignore
+          navbarRef.current.style.display = 'none'
+        }
+      })
+    } else {
+      anime({
+        targets: '.main-nav',
+        duration: 500,
+        opacity: 1,
+        begin: function() {
+          // @ts-ignore
+          navbarRef.current.style.display = 'block'
+        }
+      })
+    }
     setNavbarOpen(!navbarOpen);
   };
 
@@ -52,9 +75,7 @@ const Nav = () => {
     <>
       <div className="py-8 flex justify-center">
         <nav
-          className={`navbar z-50 flex ${
-            navbarOpen ? "flex-col" : null
-          } justify-between items-start w-full bg-none px-5 md:px-20 lg:px-64`}
+          className={`navbar z-50 flex flex-col justify-between items-start w-full bg-none px-5 md:px-20 lg:px-64`}
         >
           <div className="flex flex-row justify-between items-center w-full mb-2">
             <Link
@@ -72,9 +93,8 @@ const Nav = () => {
             </span>
           </div>
           <ul
-            className={`main-nav ${
-              navbarOpen ? "block" : "hidden"
-            } w-full md:flex-row justify-center items-center flex-col`}
+          ref={navbarRef}
+            className={`main-nav hidden w-full md:flex-row justify-center items-center flex-col`}
             onClick={toggleNavbar}
           >
             <li className="hover:bg-gray-600 w-full block">
