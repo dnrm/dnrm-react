@@ -22,6 +22,7 @@ import Spotify from "./pages/Spotify";
 import Postgresql from "./pages/Postgresql";
 import Charts from "./pages/Charts";
 import Ily from "./pages/Ily";
+import Message from "./pages/Message";
 
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
@@ -213,6 +214,9 @@ const Nav = () => {
           </Route>
           <Route path="/charts">
             <Charts />
+          </Route>
+          <Route path="/message">
+            <Message />
           </Route>
           <Route
             path="/album/:name"
