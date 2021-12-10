@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import useIsAdmin from "../hooks/useIsAdmin";
-import CreateUser from "../components/CreateUser";
-import Layout from "../components/Layout";
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import useIsAdmin from '../hooks/useIsAdmin';
+import CreateUser from '../components/CreateUser';
+import Layout from '../components/Layout';
 
-import "../styles/users.scss";
+import '../styles/users.scss';
 
 export default function Effect() {
     const [data, setData] = useState();
@@ -17,15 +17,18 @@ export default function Effect() {
 
     const deleteUser = (e: any) => {
         let id = e.target.parentNode.value;
-        return fetch(`https://${process.env.REACT_APP_HOSTNAME}/delete-user/` + id, {
-            method: "delete",
-        }).then((response) => response.json());
+        return fetch(
+            `https://${process.env.REACT_APP_HOSTNAME}/delete-user/` + id,
+            {
+                method: 'delete',
+            }
+        ).then((response) => response.json());
     };
 
     const getUsers = () => {
         fetch(`https://${process.env.REACT_APP_HOSTNAME}/get-users`)
             .then((data) => data.json())
-            .then((items) => setData(items["data"]));
+            .then((items) => setData(items['data']));
     };
 
     const isAdmin = useIsAdmin();
@@ -35,14 +38,17 @@ export default function Effect() {
             <Helmet>
                 <title>useEffect | Daniel Medina</title>
             </Helmet>
-            <h1 style={{ fontSize: "3em" }} className="title font-space-grotesk">
+            <h1
+                style={{ fontSize: '3em' }}
+                className="title font-space-grotesk"
+            >
                 Users
             </h1>
             <p>
-                From{" "}
+                From{' '}
                 <a href="https://fauna.com" target="_blank" rel="noreferrer">
                     FaunaDB
-                </a>{" "}
+                </a>{' '}
                 API
             </p>
             <br />
@@ -54,8 +60,8 @@ export default function Effect() {
                         // @ts-ignore
                         data.map((i: any) => {
                             let name =
-                                i["data"]["name"] + " " + i["data"]["lastname"];
-                            let ref = i["ref"]["@ref"]["id"];
+                                i['data']['name'] + ' ' + i['data']['lastname'];
+                            let ref = i['ref']['@ref']['id'];
 
                             return (
                                 <div className="user my-6" key={ref}>
@@ -76,12 +82,12 @@ export default function Effect() {
                                             </Link>
                                         </h1>
                                         <h3 className="text-sm">
-                                            {i["data"]["birthDate"]}
+                                            {i['data']['birthDate']}
                                         </h3>
                                         <p className="text-sm">
-                                            Joined{" "}
+                                            Joined{' '}
                                             {new Date(
-                                                i["ts"] / 1000
+                                                i['ts'] / 1000
                                             ).toDateString()}
                                         </p>
                                     </div>

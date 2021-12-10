@@ -1,28 +1,28 @@
-@import "./variables";
+@import './variables';
 
 .user {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .details {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .delete-button {
-  margin-left: auto;
-  padding: 10px;
-  background-color: $red;
-  border: none;
-  border-radius: 5px;
+    margin-left: auto;
+    padding: 10px;
+    background-color: $red;
+    border: none;
+    border-radius: 5px;
 }
 
 .delete-button svg {
-  color: white;
-  cursor: pointer;
+    color: white;
+    cursor: pointer;
 }
 
 .container {
-  max-width: 100%;
+    max-width: 100%;
 }

@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const useIsAdmin: Function = () => {
-  const [isAdmin, setIsAdmin] = useState<boolean>(false);
+    const [isAdmin, setIsAdmin] = useState<boolean>(false);
 
-  useEffect(() => {
-    localStorage.getItem("key") === "admin"
-      ? setIsAdmin(true)
-      : setIsAdmin(false);
-  }, []);
+    useEffect(() => {
+        localStorage.getItem('key') === 'admin'
+            ? setIsAdmin(true)
+            : setIsAdmin(false);
+    }, []);
 
-  return isAdmin;
+    return isAdmin;
 };
 
 export default useIsAdmin;

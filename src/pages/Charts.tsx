@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import CryptoChart from "../components/CryptoChart";
-import Layout from "../components/Layout";
+import { useState, useEffect } from 'react';
+import CryptoChart from '../components/CryptoChart';
+import Layout from '../components/Layout';
 
 const Charts = () => {
     const [prices, setPrices] = useState<any>({});
 
     useEffect(() => {
-        fetch("https://api.coincap.io/v2/assets/bitcoin/history?interval=d1")
+        fetch('https://api.coincap.io/v2/assets/bitcoin/history?interval=d1')
             .then((r) => r.json())
             .then((r) => {
                 let tenDayPrices = [];
@@ -28,9 +28,9 @@ const Charts = () => {
         labels: prices.labels,
         datasets: [
             {
-                label: "Bitcoin price",
-                backgroundColor: "rgb(255, 99, 132)",
-                borderColor: "rgb(255, 99, 132)",
+                label: 'Bitcoin price',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
                 data: prices.data,
                 fill: true,
             },

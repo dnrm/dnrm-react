@@ -3,4 +3,4 @@ import Crypto from '../pages/Crypto';
 
 test('Render crypto page', () => {
     render(<Crypto />);
-})
+});

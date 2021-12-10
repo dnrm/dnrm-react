@@ -1,7 +1,6 @@
-import { Line } from "react-chartjs-2";
+import { Line } from 'react-chartjs-2';
 
 const ChartJs = (props: any) => {
-
     return (
         <Line
             type="line"
@@ -10,16 +9,16 @@ const ChartJs = (props: any) => {
                 scales: {
                     y: {
                         max: 30,
-                        step: 1
-                    }
+                        step: 1,
+                    },
                 },
                 animations: {
                     y: {
-                        easing: "easeInOutElastic",
+                        easing: 'easeInOutElastic',
                         // @ts-ignore
                         from: (ctx: any) => {
-                            if (ctx.type === "data") {
-                                if (ctx.mode === "default" && !ctx.dropped) {
+                            if (ctx.type === 'data') {
+                                if (ctx.mode === 'default' && !ctx.dropped) {
                                     ctx.dropped = true;
                                     return 0;
                                 }
