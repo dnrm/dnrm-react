@@ -7,6 +7,7 @@ module.exports = {
         // gray: "#424242",
         dark: "#212121",
         accent: "#900C3F",
+        secondary: "#242424"
       },
       fontFamily: {
         "space-grotesk": '"Space Grotesk", sans-serif',

@@ -46,7 +46,7 @@ const Music = (props: TrackProps) => {
     <div className="shadow-lg rounded p-0 pb-2">
       <div className="group relative">
         <img
-          className="w-full xl:w-64 block rounded group-hover:opacity-50"
+          className="w-full xl:w-80 block rounded group-hover:opacity-50"
           src={props.src}
           alt=""
         />
