@@ -1,3 +1,4 @@
+import { ElementChartOptions, ScaleChartOptions, ScaleOptions } from 'chart.js';
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 
@@ -29,32 +30,39 @@ const CryptoChart = (props: any) => {
         labels: prices.labels,
         datasets: [
             {
-                label: `${props.asset} price`,
-                backgroundColor: 'rgb(255, 99, 132)',
+                label: 'Bitcoin',
+                backgroundColor: 'rgb(255, 255, 255)',
                 borderColor: 'rgb(255, 99, 132)',
                 data: prices.data,
-                fill: true,
+                fill: false,
             },
         ],
     };
 
     const options = {
         scales: {
-            yAxes: [
-                {
-                    type: 'linear',
-                    display: true,
-                    position: 'left',
-                    id: 'y-axis-1',
+            y: {
+                title: {
+                    display: false,
                 },
-            ],
+                grid: {
+                    display: true,
+                    color: 'rgba(255, 255, 255, 0.1)',
+                },
+            },
         },
-        legend: {
-            display: false,
+        plugins: {
+            legend: {
+                display: true,
+            },
+            title: {
+                display: true,
+                text: 'Bitcoin Price',
+            },
         },
     };
 
-    return <Line data={data} options={options} type="line" />;
+    return <Line data={data} options={options} />;
 };
 
 export default CryptoChart;

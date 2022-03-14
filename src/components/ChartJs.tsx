@@ -3,13 +3,11 @@ import { Line } from 'react-chartjs-2';
 const ChartJs = (props: any) => {
     return (
         <Line
-            type="line"
             data={props.data}
             options={{
                 scales: {
                     y: {
                         max: 30,
-                        step: 1,
                     },
                 },
                 animations: {

@@ -87,7 +87,7 @@ const Nav = () => {
                         </Link>
                         <span
                             onClick={toggleNavbar}
-                            className={`navbar-toggle`}
+                            className={`navbar-toggle cursor-pointer`}
                             id="js-navbar-toggle"
                         >
                             <i className="fas fa-bars"></i>
