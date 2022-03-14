@@ -67,7 +67,7 @@ export default function Coldplay() {
             <Helmet>
                 <title>Coldplay | Daniel Medina</title>
             </Helmet>
-            <Title className="font-space-grotesk">Coldplay</Title>
+            <Title className="font-work">Coldplay</Title>
             <hr />
             <Subtitle>Albums</Subtitle>
             <div id="albums-list">

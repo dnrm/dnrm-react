@@ -74,23 +74,23 @@ const Nav = () => {
 
     return (
         <>
-            <div className="py-8 flex justify-center">
+            <div className="py-8 flex justify-center text-text">
                 <nav
                     className={`navbar z-50 flex flex-col justify-between items-start w-full bg-none px-5 md:px-20 lg:px-64`}
                 >
                     <div className="flex flex-row justify-between items-center w-full mb-2">
                         <Link
                             to="/"
-                            className="logo text-2xl text-white font-space-grotesk"
+                            className="logo text-2xl font-work"
                         >
                             Home
                         </Link>
                         <span
                             onClick={toggleNavbar}
-                            className={`navbar-toggle cursor-pointer`}
+                            className={`navbar-toggle cursor-pointer text-text`}
                             id="js-navbar-toggle"
                         >
-                            <i className="fas fa-bars"></i>
+                            <i className="fas fa-bars text-text"></i>
                         </span>
                     </div>
                     <ul
@@ -102,7 +102,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/state-test"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 State Test
                             </NavLink>
@@ -111,7 +111,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/add-to-array"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 Add to array
                             </NavLink>
@@ -120,7 +120,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/effect"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 useEffect Test
                             </NavLink>
@@ -129,7 +129,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/coldplay"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 Coldplay
                             </NavLink>
@@ -138,7 +138,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/crypto"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 Crypto
                             </NavLink>
@@ -147,7 +147,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/spotify"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 Spotify
                             </NavLink>
@@ -156,7 +156,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/postgresql"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 PostgreSQL
                             </NavLink>
@@ -165,7 +165,7 @@ const Nav = () => {
                             <NavLink
                                 activeClassName="bg-accent"
                                 to="/charts"
-                                className="py-2 block px-2 font-space-grotesk text-sm"
+                                className="py-2 block px-2 font-work text-sm"
                             >
                                 Charts
                             </NavLink>
@@ -174,7 +174,7 @@ const Nav = () => {
                 </nav>
             </div>
             <div></div>
-            <section className="main-content text-white py-12">
+            <section className="main-content text-text py-12">
                 <Switch>
                     <Route path="/add-to-array">
                         <AddToArray />

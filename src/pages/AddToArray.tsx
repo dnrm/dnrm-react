@@ -35,7 +35,7 @@ export default function AddToArray() {
             <Helmet>
                 <title>Add To Array | Daniel Medina</title>
             </Helmet>
-            <h1 className="font-space-grotesk text-6xl pb-8">
+            <h1 className="font-work text-6xl pb-8">
                 Add element to array
             </h1>
             <InputGroup

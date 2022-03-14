@@ -9,7 +9,7 @@ export default function Home() {
                 <title>Home | Daniel Medina</title>
             </Helmet>
             <section id="main">
-                <h1 className="text-4xl py-2 relative font-space-grotesk">
+                <h1 className="text-4xl py-2 relative font-work">
                     Daniel Medina
                 </h1>
                 <hr className="relative" />

@@ -43,7 +43,7 @@ const Music = (props: TrackProps) => {
     };
 
     return (
-        <div className="shadow-lg rounded p-0 pb-2">
+        <div className="shadow-lg bg-secondary rounded p-0 pb-2">
             <div className="group relative">
                 <img
                     className="w-full xl:w-80 block rounded group-hover:opacity-50"
@@ -96,8 +96,8 @@ const Music = (props: TrackProps) => {
                 </div>
                 {props.preview && <audio src={props.preview} ref={audioRef} />}
             </div>
-            <div className="py-5 w-full xl:w-64">
-                <h3 className="text-white text-2xl">
+            <div className="px-5 pt-2 pb-1 w-full xl:w-64">
+                <h1 className="text-white text-2xl">
                     <a
                         className="text-gray-300 hover:underline"
                         href={props.url}
@@ -105,7 +105,7 @@ const Music = (props: TrackProps) => {
                     >
                         {props.name}
                     </a>
-                </h3>
+                </h1>
                 <p className="text-gray-400 text-lg leading-none">
                     {props.artist}
                 </p>

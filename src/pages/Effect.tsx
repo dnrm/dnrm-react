@@ -40,7 +40,7 @@ export default function Effect() {
             </Helmet>
             <h1
                 style={{ fontSize: '3em' }}
-                className="title font-space-grotesk"
+                className="title font-work"
             >
                 Users
             </h1>
@@ -76,7 +76,7 @@ export default function Effect() {
                                         <h1 className="text-2xl font-semibold">
                                             <Link
                                                 to={`/details/${ref}`}
-                                                className="details font-space-grotesk"
+                                                className="details font-work"
                                             >
                                                 {name}
                                             </Link>

@@ -67,7 +67,7 @@ const Spotify = () => {
         <Layout>
             <div className="grid-cols-1 xl:grid-cols-2 grid gap-8 p-0">
                 <section id="search">
-                    <h1 className="text-4xl font-space-grotesk">
+                    <h1 className="text-4xl font-work">
                         Spotify Search
                     </h1>
                     <br />

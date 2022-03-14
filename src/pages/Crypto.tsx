@@ -92,7 +92,7 @@ export default function Domains() {
             </Helmet>
             <section id="content" className="grid-cols-1 lg:grid-cols-2 grid">
                 <section id="form">
-                    <h1 className="text-4xl font-light font-space-grotesk">
+                    <h1 className="text-4xl font-light font-work">
                         Cryptocurrency prices
                     </h1>
                     <br />
@@ -130,13 +130,13 @@ export default function Domains() {
                                         />
                                     </div>
                                     <div className="text">
-                                        <h1 className="text-6xl font-space-grotesk">
-                                            <span className="font-space-grotesk">
+                                        <h1 className="text-6xl font-work">
+                                            <span className="font-work">
                                                 {data.symbol}
                                             </span>{' '}
                                             {data.name}
                                         </h1>
-                                        <h2 className="text-2xl font-space-grotesk">
+                                        <h2 className="text-2xl font-work">
                                             {parseFloat(data.priceUsd).toFixed(
                                                 5
                                             )}{' '}
@@ -145,7 +145,7 @@ export default function Domains() {
                                     </div>
                                 </>
                             ) : (
-                                <div className="mt-2 flex justify-center items-center font-space-grotesk">
+                                <div className="mt-2 flex justify-center items-center font-work">
                                     <i className="fas fa-ban text-5xl pr-4"></i>
                                     <h1 className="text-5xl">Coin not found</h1>
                                 </div>

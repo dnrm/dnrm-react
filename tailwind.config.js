@@ -5,12 +5,13 @@ module.exports = {
         extend: {
             colors: {
                 // gray: "#424242",
-                dark: '#212121',
-                accent: '#900C3F',
-                secondary: '#242424',
+                dark: '#6d6875',
+                accent: '#ffcb69',
+                secondary: '#52504b',
+                text: '#f8edeb'
             },
             fontFamily: {
-                'space-grotesk': '"Space Grotesk", sans-serif',
+                'work': '"Work Sans", sans-serif',
             },
         },
     },

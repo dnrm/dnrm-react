@@ -14,7 +14,7 @@ export default function Input(props: any) {
         <StyledInput
             placeholder="Type here..."
             {...props}
-            className="font-space-grotesk"
+            className="font-work"
         >
             {props.children}
         </StyledInput>

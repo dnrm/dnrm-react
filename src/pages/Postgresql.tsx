@@ -28,14 +28,14 @@ const Postgresql = (props: any) => {
 
     return (
         <Layout>
-            <h1 className="text-4xl font-light pb-4 font-space-grotesk">
+            <h1 className="text-4xl font-light pb-4 font-work">
                 <a
                     href="https://www.postgresql.org/"
                     target="blank"
                     rel="noreferrer"
                 >
                     <i className="fas fa-database"></i>{' '}
-                    <span className="font-space-grotesk">PostgreSQL</span>
+                    <span className="font-work">PostgreSQL</span>
                 </a>{' '}
                 Database
             </h1>

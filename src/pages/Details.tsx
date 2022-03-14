@@ -29,7 +29,7 @@ export default function Details() {
                         alt=""
                         className="h-64 w-64 object-cover rounded-full border-8 border-white"
                     />
-                    <h1 className="mt-2 font-space-grotesk text-4xl">
+                    <h1 className="mt-2 font-work text-4xl">
                         {data.name} {data.lastname}
                     </h1>
                     <h3>{data.birthDate}</h3>

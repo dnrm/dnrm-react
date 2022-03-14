@@ -10,7 +10,7 @@ export default function Button(props: any) {
     return (
         <>
             <StyledButton
-                className="button bg-accent text-xl  font-space-grotesk p-2 px-4"
+                className="button bg-accent text-xl  font-work p-2 px-4"
                 {...props}
             >
                 {props.children}

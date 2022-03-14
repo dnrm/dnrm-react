@@ -36,8 +36,8 @@ export default function StateTest(props: any) {
             <Helmet>
                 <title>State Test | Daniel Medina</title>
             </Helmet>
-            <h1 className="text-6xl font-space-grotesk">State Test</h1>
-            <p className="font-space-grotesk">
+            <h1 className="text-6xl font-work">State Test</h1>
+            <p className="font-work">
                 Your mesage: {message ? message : 'Nothing'}
             </p>
             <br />
