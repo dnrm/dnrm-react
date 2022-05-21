@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/create.css';
+import { toast } from 'react-hot-toast'
 
 interface Props {
     update: Function;
@@ -16,7 +17,7 @@ export default function CreateUser(props: Props) {
         props.update();
     };
 
-    const makeRequest = (url: string, options: Object) => {
+    const makeRequest = async (url: string, options: Object) => {
         let body = {
             ...options,
             img: 'https://source.unsplash.com/random/800x800',
@@ -24,15 +25,22 @@ export default function CreateUser(props: Props) {
 
         console.log(body);
 
-        fetch(url, {
+        const response = await fetch(url, {
             method: 'post',
             body: JSON.stringify(body),
             headers: {
                 'Content-Type': 'application/json',
             },
         })
-            .then((r) => r.json())
-            .then((r) => console.log(r));
+
+        const json = await response.json()
+
+        if (response.ok) {
+            console.log(json)
+            toast.success('User created successfully!')
+        } else {
+            toast.error('User creation failed!')
+        }
     };
 
     return (
